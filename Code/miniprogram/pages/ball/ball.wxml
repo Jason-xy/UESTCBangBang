@@ -1,0 +1,14 @@
+<Hd></Hd>
+<view class="box">
+  <view class=".container0">
+    <text>名字：张三\n运动：篮球\n人数：5人\n地点：校篮球场4号\n时间：4.12日下午五点\n备注：无</text>
+  </view>
+</view>
+
+<view class="box">
+  <view class=".container1">
+    <text>名字：张三\n运动：篮球\n人数：5人\n地点：校篮球场4号\n时间：4.12日下午五点\n备注：无</text>
+  </view>
+</view>
+
+<Fd></Fd>

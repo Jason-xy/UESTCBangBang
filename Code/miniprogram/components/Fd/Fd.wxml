@@ -1,0 +1,4 @@
+<view class="footer">
+  <image class="pic" mode="widthFix" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcY6pAySB*dwca1TBzX08jMO*NR1AKPIzbHD.wOQPKTmAZ8Lfb4kHkZ9BaPgU*X41m6YEw2CGSDMINNzMF2HVNx8!/b&bo=YQBKAAAAAAADFxk!&rf=viewer_4"></image>
+  <view class="text">- 小程序的名字 -</view>
+</view>

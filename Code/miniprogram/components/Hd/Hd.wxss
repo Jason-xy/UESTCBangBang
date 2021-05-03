@@ -1,0 +1,4 @@
+.header{width:750rpx; height:90rpx; border:1px solid #eee;}
+.hdCon{display:flex; justify-content: space-between; align-items: center; height: 100%;}
+.hdCon image{height: 100%;}
+.right{position: relative;}

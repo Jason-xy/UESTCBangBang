@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Fd":"../../components/Fd/Fd"
+  },
+  "navigationBarBackgroundColor":"#fff",
+  "navigationBarTitleText":"活动"
+}

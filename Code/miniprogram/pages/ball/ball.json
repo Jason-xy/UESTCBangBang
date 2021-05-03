@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "Hd":"../../components/Hd/Hd",
+    "Fd":"../../components/Fd/Fd"
+  },
+  "navigationBarTitleText":"运动界面"
+}  

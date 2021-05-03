@@ -1,0 +1,91 @@
+.search-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.search-left{
+  background-color: #eee;
+  flex: 2;
+  border-radius: 40rpx;
+  padding-right: 40rpx;
+  box-sizing: border-box;
+}
+.search-left input{
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 88rpx);
+}
+.search-right{
+  padding-left: 20rpx;
+}
+.search-right image{
+  width: 75rpx;
+  height: 75rpx;
+  vertical-align: middle;
+}
+
+page{
+  background: #ffffff;
+  width: 100%;
+  height: 80%;
+ }
+ .imageContainer{
+  width: 100%;
+  height: 300rpx;
+  background: #ffffff;
+ }
+ .item.pictrue{height: 300rpx;}
+ .itemImg{
+  position: absolute;
+  width: 100%;
+  height: 240rpx;
+  border-radius: 15rpx;
+  z-index: 5;
+  opacity: 1;
+  top: 13%;
+ }
+ .active.pictrue{
+  opacity: 1;
+  z-index: 10;
+  height: 265rpx;
+  top: 7%;
+  transition:all .2s ease-in 0s;
+ }
+
+.move{background: #f0f3f8; padding: 30rpx 20rpx 70rpx;}
+.pubTitle{
+  display:flex; justify-content: space-between; height: 100rpx; border:2px solid #f0f3f8; background: #f0f3f8; align-items: center; margin-bottom: 20rpx;
+}
+.pubTitle .bar image{
+  width: 190rpx; height: 90rpx; height:100%; position: relative; border-radius: 12rpx; padding-left: 5rpx; align-items: center;
+}
+.pubTitle .bar image::before{
+  display: block; width: 8rpx; height: 120rpx; background: #9F5F9F; content:""; position: absolute; left: 0rpx; top:0%;
+  margin-top: -15rpx;
+}
+
+.moMain{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.moMain .box{width:350rpx; height: 216rpx; margin-bottom: 10rpx;}
+.moMain .pic{width:100%; height: 100%;}
+
+.study{padding: 30rpx 20rpx 70rpx; background: #fff;}
+.stuTitle{
+  display:flex; justify-content: space-between; height: 100rpx; border:2px solid #fff; background: #fff; align-items: center; margin-bottom: 20rpx;
+}
+.stuTitle .bar image{
+  width: 190rpx; height: 90rpx; height:100%; position: relative; border-radius: 12rpx; padding-left: 5rpx; align-items: center;
+}
+.stuTitle .bar image::before{
+  display: block; width: 8rpx; height: 120rpx; background: #2F4F2F; content:""; position: absolute; left: 0rpx; top:0%;
+  margin-top: -15rpx;
+}
+.stTtem{display: flex; padding: 15rpx 0; border:1rpx dashed #f4f4f4; justify-content: space-between;}
+.stTtem .pic{ width: 240rpx; height: 150rpx;}
+.stTtem .pic image{width:100%; height: 100%;}
+.stTtem .txt{width: 440rpx; display: flex; flex-direction: column; justify-content: space-between;}
+.stTtem .title{font-size: 30rpx;}
+.stTtem .info{font-size: 26rpx; color:#888}
+.stTtem .info text{font-size: 22rpx;}

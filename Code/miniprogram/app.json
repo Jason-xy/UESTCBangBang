@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/test/test",
     "pages/activities/activities",
     "pages/ball/ball",
     "pages/lease/lease",
@@ -15,26 +16,27 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "list":[{
-        "pagePath":"pages/activities/activities",
+    "list": [
+      {
+        "pagePath": "pages/activities/activities",
         "text": "活动",
         "iconPath": "icon/_0.png",
         "selectedIconPath": "icon/4.png"
       },
       {
-        "pagePath":"pages/lease/lease",
+        "pagePath": "pages/lease/lease",
         "text": "物品",
         "iconPath": "icon/_1.png",
         "selectedIconPath": "icon/4.png"
       },
       {
-        "pagePath":"pages/release/release",
+        "pagePath": "pages/release/release",
         "text": "发布",
         "iconPath": "icon/_2.png",
         "selectedIconPath": "icon/4.png"
       },
       {
-        "pagePath":"pages/personal/personal",
+        "pagePath": "pages/personal/personal",
         "text": "个人",
         "iconPath": "icon/_3.png",
         "selectedIconPath": "icon/4.png"

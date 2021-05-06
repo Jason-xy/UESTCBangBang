@@ -40,6 +40,7 @@
   "appid": "wxfe909cd7bd2b7476",
   "projectname": "aboutANDborrow",
   "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []

@@ -101,7 +101,7 @@ Page({
     })
   },
 
-  activityUp: function() {
+  activityUp: function() { //增加活跃度
     wx.cloud.callFunction({
       name: 'user',
       data: {

@@ -1,51 +1,18 @@
-// pages/personal/personal.js
+// pages/test/test.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let that = this;
-    setTimeout(function() {
-      that.loading = true
-    }, 500)
-  },
 
-  onLoad() {
-    let that = this;
-    setTimeout(function() {
-      that.setData({
-        loading: true
-      })
-    }, 500)
-  },
-  showModal(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
-    })
-  },
-  hideModal(e) {
-    this.setData({
-      modalName: null
-    })
-  },
-  SetColor(e) {
-    this.setData({
-      color: e.currentTarget.dataset.color,
-      modalName: null
-    })
-  },
-  SetActive(e) {
-    this.setData({
-      active: e.detail.value
-    })
   },
 
   /**

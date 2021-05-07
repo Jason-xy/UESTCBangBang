@@ -44,7 +44,7 @@ exports.main = async (event, context) => {
   } else if (event.op == 'remove') { //删除当前用户
     try {
       return await user.where({
-        phone: "1224649136"
+        openid: wxContext.OPENID
       }).remove();
     } catch (error) {
       console.error(error)

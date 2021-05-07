@@ -21,15 +21,16 @@
 |property|type|comment|
 |-|-|-|
 |_id|string |自动生成|
-|masterid| string |活动发起者的_id|
+|masterid| string |活动发起者的openid|
 |name| string |发起者输入，活动名|
 |type|string |发起者选择，活动类型|
-|startTime| date |发起者输入，活动开始时间，格式 YYYY-MM-dd HH:mm:ss|
+|startTime| String |发起者输入，活动开始时间，格式 YYYY-MM-dd HH:mm:ss|
 |address| string |发起者输入，活动地点|
 |contact|string |发起者输入，联系方式，如手机号，微信号，群号等|
 |total|number |发起者输入，活动总人数|
 |remarks| string |发起者输入，活动的备注信息|
-|members| array[string, string]|有成功申请者，系统添加申请者的_id到数组中|
+|members| array[string, string]|有成功申请者，系统添加申请者的openid到数组中|
+|finish| boolean| 活动是否已完成，默认为false，完成后改为true|
 ---
 3. item表
 
@@ -46,6 +47,5 @@
 |price |string |出租者输入，物品的租金|
 |remarks| string|出租者输入，物品的备注|
 
-![](https://gitee.com/zhangjie0524/picgo/raw/master/20210503154242.png)# UESTCBangBang
 
 

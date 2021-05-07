@@ -1,2 +1,27 @@
 <!--pages/personal/personal.wxml-->
-<text>pages/personal/personal.wxml</text>
+
+<image src='https://cdn.nlark.com/yuque/0/2019/jpeg/223589/1551683250125-assets/web-upload/dc4db058-ea1e-4180-bcfe-f68a02a68859.jpeg' mode='widthFix' class='tn-bg'></image>
+
+<view class="cu-custom">
+    <view class="cu-bar fixed text-white" style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;">
+        <view class='action'>
+            <text class="text-xl"></text>
+        </view>
+    </view>
+</view>
+
+<view class="" style="padding-top:{{CustomBar}}px;">
+    <view class="cu-list menu my_logo">
+        <view class="cu-item">
+            <view class="cu-avatar round xl margin-right-sm shadow-blur-lg bg-img" style="background-image:url(https://cdn.nlark.com/yuque/0/2019/png/280373/1567610735493-assets/web-upload/94de4712-682f-4436-9eb3-dc42f155241e.png);"></view>
+            <view class='content flex-sub'>
+                <view class='padding-left-sm text-dark text-lg text-shadow'>白白</view>
+                <view class="cu-progress round margin-top">
+                  <view class="bg-cyan" style="width:{{loading?'87%':''}};">87</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class='cu-tabbar-height'></view>

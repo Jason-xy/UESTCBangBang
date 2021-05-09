@@ -2,7 +2,7 @@
 Page({
 
   //添加新活动
-  addActivity: function() {
+  add: function() {
     wx.cloud.callFunction({
       name: 'activity',
       data: {
@@ -25,7 +25,7 @@ Page({
   },
 
   //更新活动信息
-  updateActivity: function() {
+  update: function() {
     wx.cloud.callFunction({
       name: 'activity',
       data: {
@@ -126,7 +126,7 @@ Page({
       wx.cloud.callFunction({
         name: 'activity',
         data: {
-          op: 'queryUnfinish',
+          op: 'queryByType',
           type: "篮球"
         },
         success: function(res) {
@@ -171,6 +171,23 @@ Page({
         console.log(res.result)
         console.log(res.result.stats)
         console.log(res.result.stats.removed) //删除的记录条数
+      }
+    })
+  },
+
+  //查询所有活动信息
+  queryAll: function() { //查看所有活动信息，这样可以在前端对所有活动进行分类等操作,而不使用后端提供的其他查询接口
+    wx.cloud.callFunction({
+      name: 'activity',
+      data: {
+        op: 'queryAll',
+      }, 
+      success: function(res) {
+        //查看返回数据
+        console.log(res);
+        console.log(res.result);
+        console.log(res.result.data);
+        console.log(res.result.data[0]);
       }
     })
   }

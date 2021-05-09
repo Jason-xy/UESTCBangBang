@@ -2,6 +2,7 @@
   "pages": [
     "pages/userTest/test",
     "pages/activityTest/activityTest",
+    "pages/itemTest/itemTest",
     "pages/activities/activities",
     "pages/ball/ball",
     "pages/lease/lease",

@@ -1,0 +1,10 @@
+<!--miniprogram/pages/itemTest/itemTest.wxml-->
+<button bindtap="addItem">添加物品</button>
+<button bindtap="update">更新物品信息</button>
+<button bindtap="rentItem">标记物品已出租</button>
+<button bindtap="removeItem">删除指定物品</button>
+<button bindtap="queryAll">查询所有物品信息</button>
+<button bindtap="queryBy_id">查询指定物品的信息</button>
+<button bindtap="queryUnRented">查询未出租物品</button>
+<button bindtap="queryByType">查询某一类型物品信息</button>
+<button bindtap="queryByMasterid">查询当前用户的所有物品</button>

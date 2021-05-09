@@ -39,13 +39,15 @@
 |_id |string |自动生成|
 |masterid |string|物品出租者的_id|
 |name |string |出租者输入，物品名|
+|contact|string|出租者输入，联系方式|
 |type |string |出租者选择，物品类型|
 |image| string |出租者上传物品描述图片到云存储，数据库中存放Fileid|
-|startTime| date|出租者输入，物品的开始出租时间|
-|endTime|date |出租者输入，物品的截止出租时间|
+|startTime| string|出租者输入，物品的开始出租时间|
+|endTime|string |出租者输入，物品的截止出租时间|
 |address| string |出租者输入，物品的交易地点|
 |price |string |出租者输入，物品的租金|
 |remarks| string|出租者输入，物品的备注|
+|rented|boolean|物品是否已出租，默认为false，出租后改为true|
 
 
 

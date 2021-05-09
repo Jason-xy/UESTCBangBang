@@ -16,7 +16,8 @@ Page({
 
   },
 
-  addUser: function() {
+  //添加用户
+  add: function() {
     wx.cloud.callFunction({
       name: "user",
       data: {
@@ -34,6 +35,7 @@ Page({
     })
   },
   
+  //查询当前用户信息
   queryCurrent: function() {
     wx.cloud.callFunction({
       name: 'user',
@@ -50,6 +52,7 @@ Page({
     })
   },
 
+  //查询所有用户信息
   queryAll:function() {
     wx.cloud.callFunction({
       name: 'user',
@@ -66,7 +69,8 @@ Page({
     })
   },
 
-  removeUser: function() {
+  //删除当前用户
+  remove: function() {
     wx.cloud.callFunction({
       name: "user",
       data: {
@@ -82,7 +86,8 @@ Page({
     })
   },
 
-  updateCurrent: function() {
+  //更新当前用户信息
+  update: function() {
     wx.cloud.callFunction({
       name: 'user',
       data: {
@@ -101,6 +106,7 @@ Page({
     })
   },
 
+  //当前用户活跃度加一
   activityUp: function() { //增加活跃度
     wx.cloud.callFunction({
       name: 'user',

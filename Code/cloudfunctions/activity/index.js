@@ -83,6 +83,12 @@ exports.main = async (event, context) => {
     } catch (e) {
       console.error(e);
     }
+  } else if(event.op == 'queryAll') { //查询所有活动信息
+    try {
+      return await activity.get();
+    } catch(e) {
+      console.error(e);
+    }
   } else if(event.op == 'queryByMasterid') { //根据masterid查询
     try{
     return await activity.where({
@@ -115,5 +121,5 @@ exports.main = async (event, context) => {
     } catch (error) {
       console.error(error);
     }
-  }
+  } 
 }

@@ -1,6 +1,6 @@
 <!--miniprogram/pages/activityTest/activityTest.wxml-->
-<button bindtap="addActivity">添加活动</button>
-<button bindtap="updateActivity">修改活动</button>
+<button bindtap="add">添加活动</button>
+<button bindtap="update">修改活动</button>
 <button bindtap="queryByMasterid">查询用户发布的所有活动</button>
 <button bindtap="queryBy_id">查询当前活动（根据_id）</button>
 <button bindtap="queryUnfinish">查询未结束活动</button>
@@ -8,3 +8,4 @@
 <button bindtap="addMember">添加活动成员</button>
 <button bindtap="finishActivity">完成活动</button>
 <button bindtap="removeActivity">删除活动（根据_id）</button>
+<button bindtap="queryAll">查询所有活动信息</button>

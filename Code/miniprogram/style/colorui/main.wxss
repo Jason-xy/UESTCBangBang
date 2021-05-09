@@ -2045,7 +2045,7 @@ button.icon.lg {
 	position: absolute;
 	top: 36rpx;
 	z-index: 9;
-	background-color: var(--white);
+	background-color: var();
 	width: 50rpx;
 	height: 50rpx;
 	text-align: center;
@@ -2059,7 +2059,7 @@ button.icon.lg {
 }
 
 .cu-timeline>.cu-item[class*="cuIcon-"]::before {
-	background-color: var(--white);
+	background-color: var();
 	width: 50rpx;
 	height: 50rpx;
 	text-align: center;

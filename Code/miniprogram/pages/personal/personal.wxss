@@ -1,8 +1,8 @@
 /* pages/personal/personal.wxss */
 .UCenter-bg {
-  background-image: url(https://cdn.nlark.com/yuque/0/2019/jpeg/223589/1551683250125-assets/web-upload/dc4db058-ea1e-4180-bcfe-f68a02a68859.jpeg);
+  background-image: url(https://s2.ax1x.com/2019/07/20/ZzaGcV.png);
   background-size: cover;
-  height: 700rpx;
+  height: 300rpx;
   display: flex;
   justify-content: center;
   overflow: hidden;

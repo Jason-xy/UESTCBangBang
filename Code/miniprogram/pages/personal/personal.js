@@ -1,13 +1,48 @@
 // pages/personal/personal.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-    
+  options: {
+    addGlobalClass: true,
   },
-
+  data: {
+    starCount: 0,
+    FansTotal: 0,
+    visitTotal: 0,
+  },
+  attached() {
+    console.log("success")
+    let that = this;
+    wx.showLoading({
+      title: '数据加载中',
+      mask: true,
+    })
+    let i = 0;
+    numDH();
+    function numDH() {
+      if (i < 20) {
+        setTimeout(function () {
+          that.setData({
+            starCount: i,
+            FansTotal: i,
+            visitTotal: i
+          })
+          i++
+          numDH();
+        }, 20)
+      } else {
+        that.setData({
+          starCount: that.coutNum(30),
+          FansTotal: that.coutNum(8),
+          visitTotal: that.coutNum(240)
+        })
+      }
+    }
+    wx.hideLoading()
+  },
   /**
    * 生命周期函数--监听页面加载
    */

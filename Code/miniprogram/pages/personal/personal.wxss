@@ -1,6 +1,6 @@
 /* pages/personal/personal.wxss */
 .UCenter-bg {
-  background-image: url(https://image.weilanwl.com/color2.0/index.jpg);
+  background-image: url(https://cdn.nlark.com/yuque/0/2019/jpeg/223589/1551683250125-assets/web-upload/dc4db058-ea1e-4180-bcfe-f68a02a68859.jpeg);
   background-size: cover;
   height: 700rpx;
   display: flex;
@@ -13,23 +13,19 @@
   font-weight: 300;
   text-shadow: 0 0 3px rgba(0,0,0,0.3);
 }
-.UCenter-bg::after {
- content: "";
- position: absolute;
- width: 100vw;
- height: 50vw;
- background-color: #f1f1f1;
- transform: rotate(-10deg) scale(2,2);
- bottom: -60vw;
- left: 0;
- right: 0;
- margin: auto;
-
-}
 .UCenter-bg text{
   opacity: 0.8;
 }
 .UCenter-bg image {
   width: 250rpx;
   height: 250rpx;
+}
+.UCenter-bg .gif-wave{
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;  
+  height: 100rpx;   
 }

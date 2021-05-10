@@ -12,6 +12,7 @@ Page({
     starCount: 0,
     FansTotal: 0,
     visitTotal: 0,
+    ColorList: app.globalData.ColorList
   },
   attached() {
     console.log("success")

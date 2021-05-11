@@ -1,5 +1,6 @@
 // pages/personal/personal.js
 const app = getApp();
+const globalData = getApp().globalData;
 Page({
 
   /**
@@ -9,10 +10,11 @@ Page({
     addGlobalClass: true,
   },
   data: {
-    starCount: 0,
-    FansTotal: 0,
-    visitTotal: 0,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    ColorList: app.globalData.ColorList,
+    randomColor: Math.floor(Math.random()*5)
   },
+
   attached() {
     console.log("success")
     let that = this;
@@ -43,15 +45,13 @@ Page({
     }
     wx.hideLoading()
   },
+
+  addTags() {
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    let that = this;
-    setTimeout(function() {
-      that.loading = true
-    }, 500)
-  },
 
   onLoad() {
     let that = this;
@@ -60,26 +60,53 @@ Page({
         loading: true
       })
     }, 500)
-  },
-  showModal(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
+
+    //获取用户信息
+    wx.showModal({
+      title: '温馨提示',
+      content: '正在请求您的个人信息',
+      success(res) {
+        if (res.confirm) {
+          wx.getUserProfile({
+            desc: "获取你的昵称、头像、地区及性别",
+            success: res => {
+              console.log(res)
+              that.setData({
+                avatar: res.userInfo.avatarUrl,
+                username: res.userInfo.nickName
+              })
+            },
+            fail: res => {
+               //拒绝授权
+              that.showErrorModal('您拒绝了请求');
+              return;
+            }
+          })
+        } else if (res.cancel) {
+          //拒绝授权 showErrorModal是自定义的提示
+          that.showErrorModal('您拒绝了请求');
+          return;
+        }
+      }
     })
-  },
-  hideModal(e) {
-    this.setData({
-      modalName: null
-    })
-  },
-  SetColor(e) {
-    this.setData({
-      color: e.currentTarget.dataset.color,
-      modalName: null
-    })
-  },
-  SetActive(e) {
-    this.setData({
-      active: e.detail.value
+
+    wx.cloud.callFunction({
+      name: 'user',
+      data: {
+        op: 'queryCurrent' //指定操作类型 查询所有
+      },
+      success: function(res) {
+        //查看返回数据
+        that.setData({
+          activity: res.result.data[0].activity,
+          tags: res.result.data[0].tags
+        })
+        console.log('调用云函数', res); 
+        console.log(res.result);
+        console.log(res.result.data);
+        console.log(res.result.data[0]);
+        console.log(that);
+      }
     })
   },
 

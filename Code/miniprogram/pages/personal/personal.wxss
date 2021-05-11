@@ -21,6 +21,7 @@
   height: 250rpx;
 }
 .UCenter-bg .gif-wave{
+  color: #fff;
   position: absolute;
   width: 100%;
   bottom: 0;

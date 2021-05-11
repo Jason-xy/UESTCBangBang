@@ -9,7 +9,7 @@
                 <text class='text-ms text-bold text-black padding text-shadow'>活力值：{{activity}}</text>
             </view>
         </view>
-        <image class="gif-wave" src="https://wpcos-1300629776.cos.ap-chengdu.myqcloud.com/Gallery/2021/05/09/wave.gif" mode="scaleToFill" ></image>
+        <image class="gif-wave" src="https://wpcos-1300629776.cos.ap-chengdu.myqcloud.com/Gallery/2021/05/12/output-onlinegiftools-1.gif" mode="scaleToFill" ></image>
     </view>
 
     <view class="padding flex text-center justify-center text-grey bg-white shadow">

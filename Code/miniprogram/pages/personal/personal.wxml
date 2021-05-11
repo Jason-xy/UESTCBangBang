@@ -1,7 +1,8 @@
 <!--pages/personal/personal.wxml-->
 <scroll-view scroll-y class="scrollPage">
     <view class='UCenter-bg'>
-        <view class="cu-avatar xl round margin-center shadow" style="background-image:url(https://sdn.geekzu.org/avatar/7637a8d098b1f13fabb1bbac5dc29239?s=50&d=wavatar&r=g);"></view>
+
+        <view class="cu-avatar xl round margin-center shadow" style="background-image:url({{app.globalData.wxUserInfo.avatarUrl}});"></view>
         <view class="text-xxl">
             <view class='text-xxl text-black '>Jason</view>
             <view class="cu-progress round shadow margin-top-xxl ">

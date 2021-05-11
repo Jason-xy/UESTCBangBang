@@ -1,5 +1,6 @@
 // pages/personal/personal.js
 const app = getApp();
+const globalData = getApp().globalData;
 Page({
 
   /**
@@ -9,11 +10,10 @@ Page({
     addGlobalClass: true,
   },
   data: {
-    starCount: 0,
-    FansTotal: 0,
-    visitTotal: 0,
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     ColorList: app.globalData.ColorList
   },
+
   attached() {
     console.log("success")
     let that = this;
@@ -52,6 +52,19 @@ Page({
     setTimeout(function() {
       that.loading = true
     }, 500)
+
+    wx.getSetting({
+      success (res){
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function(res) {
+              console.log(res.userInfo)
+            }
+          })
+        }
+      }
+    })
   },
 
   onLoad() {
@@ -61,6 +74,31 @@ Page({
         loading: true
       })
     }, 500)
+
+    console.log(globalData)
+    console.log(globalData["wxUserInfo"])     
+    // wx.cloud.database().collection('user').get()
+    // .then(res => {
+    //   console.log('请求成功', res)
+    // })
+    // .catch(err => {
+    //   console.log('请求失败', err)
+    // })
+
+    // wx.cloud.callFunction({
+    //   name: 'user',
+    //   data: {
+    //     op: 'queryAll' //指定操作类型 查询所有
+    //   },
+    //   success: function(res) {
+    //     //查看返回数据
+    //     console.log('调用云函数', res); 
+    //     console.log(res.result);
+    //     console.log(res.result.data);
+    //     console.log(res.result.data[0]);
+    //   }
+    // })
+
   },
   showModal(e) {
     this.setData({

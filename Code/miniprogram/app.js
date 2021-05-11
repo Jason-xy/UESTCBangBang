@@ -4,7 +4,7 @@ App({
     wxUserInfo: {},
   },
 
-  onLaunch: function () {
+  onLaunch: async function () {
 
     var that = this
 
@@ -20,33 +20,15 @@ App({
       env: 'cloud1-5gjnayyifcd4e2a2'
     })
 
-    //获取用户信息
-    wx.showModal({
-      title: '温馨提示',
-      content: '正在请求您的个人信息',
-      success(res) {
-        if (res.confirm) {
-          wx.getUserProfile({
-          desc: "获取你的昵称、头像、地区及性别",
-          success: res => {
-            console.log(res)
-            that.globalData.wxUserInfo = res.userInfo;
-          },
-          fail: res => {
-             //拒绝授权
-            that.showErrorModal('您拒绝了请求');
-            return;
-          }
-        })} else if (res.cancel) {
-          //拒绝授权 showErrorModal是自定义的提示
-          that.showErrorModal('您拒绝了请求');
-          return;
-        }
-      }
-    })
-
+    let userInfo = await new Promise((resolve) => {
+      
+    });
     
+    console.log(userInfo)
+
+
+
     console.log(this.globalData)
-  
+
   }
 })

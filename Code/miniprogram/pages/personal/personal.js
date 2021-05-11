@@ -11,7 +11,8 @@ Page({
   },
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    ColorList: app.globalData.ColorList
+    ColorList: app.globalData.ColorList,
+    randomColor: Math.floor(Math.random()*5)
   },
 
   attached() {
@@ -44,28 +45,13 @@ Page({
     }
     wx.hideLoading()
   },
+
+  addTags() {
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  // onLoad: function (options) {
-  //   let that = this;
-  //   setTimeout(function() {
-  //     that.loading = true
-  //   }, 500)
-
-  //   wx.getSetting({
-  //     success (res){
-  //       if (res.authSetting['scope.userInfo']) {
-  //         // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-  //         wx.getUserInfo({
-  //           success: function(res) {
-  //             console.log(res.userInfo)
-  //           }
-  //         })
-  //       }
-  //     }
-  //   })
-  // },
 
   onLoad() {
     let that = this;
@@ -104,50 +90,23 @@ Page({
       }
     })
 
-    console.log(globalData)
-    console.log(globalData.wxUserInfo)
-    // wx.cloud.database().collection('user').get()
-    // .then(res => {
-    //   console.log('请求成功', res)
-    // })
-    // .catch(err => {
-    //   console.log('请求失败', err)
-    // })
-
-    // wx.cloud.callFunction({
-    //   name: 'user',
-    //   data: {
-    //     op: 'queryAll' //指定操作类型 查询所有
-    //   },
-    //   success: function(res) {
-    //     //查看返回数据
-    //     console.log('调用云函数', res); 
-    //     console.log(res.result);
-    //     console.log(res.result.data);
-    //     console.log(res.result.data[0]);
-    //   }
-    // })
-
-  },
-  showModal(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
-    })
-  },
-  hideModal(e) {
-    this.setData({
-      modalName: null
-    })
-  },
-  SetColor(e) {
-    this.setData({
-      color: e.currentTarget.dataset.color,
-      modalName: null
-    })
-  },
-  SetActive(e) {
-    this.setData({
-      active: e.detail.value
+    wx.cloud.callFunction({
+      name: 'user',
+      data: {
+        op: 'queryCurrent' //指定操作类型 查询所有
+      },
+      success: function(res) {
+        //查看返回数据
+        that.setData({
+          activity: res.result.data[0].activity,
+          tags: res.result.data[0].tags
+        })
+        console.log('调用云函数', res); 
+        console.log(res.result);
+        console.log(res.result.data);
+        console.log(res.result.data[0]);
+        console.log(that);
+      }
     })
   },
 

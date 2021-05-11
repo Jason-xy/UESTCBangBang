@@ -4,41 +4,23 @@
 
         <view class="cu-avatar xl round margin-center shadow" style="background-image:url({{avatar}});"></view>
         <view class="text-xxl">
-            <view class='text-xxl text-black '>{{username}}</view>
-            <view class="cu-progress round shadow margin-top-xxl ">
-                <view class="bg-yellow radius shadow" style="width:{{loading?'61.8%':''}};">
-                    <text class='text-df'>Lv2</text>
-                </view>
+            <view class='text-xxl text-black text-center '>{{username}}</view>
+            <view class="solid-bottom text-xs padding text-center">
+                <text class='text-ms text-bold text-black padding text-shadow'>活力值：{{activity}}</text>
             </view>
         </view>
-        <image class="gif-wave" src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" ></image>
+        <image class="gif-wave" src="https://wpcos-1300629776.cos.ap-chengdu.myqcloud.com/Gallery/2021/05/09/wave.gif" mode="scaleToFill" ></image>
     </view>
 
     <view class="padding flex text-center justify-center text-grey bg-white shadow">
-        <view class="radius shadow bg-white margin-sm">
-            <view class="cu-tag radius bg-red light">篮球</view>
-        </view>
-        
-        <view class="radius shadow bg-white margin-sm">
-            <view class="cu-tag radius bg-blue light">音乐</view>
+
+        <view class="radius shadow bg-white margin-sm" wx:for="{{tags}}" wx:for-item="lable" wx:for-index="index">
+                <view class="cu-tag radius bg-{{ColorList[index+randomColor].name}} light">{{lable}}</view>
         </view>
 
-        <view class="radius shadow bg-white margin-sm">
-            <view class="cu-tag radius bg-green light">旅行</view>
-        </view>
-
-        <view class="radius shadow bg-white margin-sm">
-            <view class="cu-tag radius bg-cyan light">摄影</view>
-        </view>
-
-        <view class="radius shadow bg-white margin-sm">
-            <view class="cu-tag radius bg-yellow light">乒乓</view>
-        </view>
-        
-        <view class="round shadow bg-white margin-sm">
+        <view bindtap="addTags" class="round shadow bg-white margin-sm">
             <button class="cu-btn sm round icon">+</button>
         </view>
-
     </view>
 
     <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">

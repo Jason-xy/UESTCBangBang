@@ -1,0 +1,10 @@
+<view class='margin-sm bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于“成电帮帮”</view>
+  <view class='text-content'>
+    <view>Hi！同学你好呀！</view>
+    <view class='margin-top-sm'>这是一个带给同学们便捷校园生活的APP，我们将同学们的信息汇集起来，节省大家四处寻找同伴、寻找器材、书籍的时间，同时也能让大家闲置的器材、书籍租借给需要的同学，让闲置游起来。我们希望渐渐的它可以在生活的许多方面帮到你！</view>
+    <view class='margin-top-sm'>这是一个由学生团队开发的免费的APP，在第一版发布之后将会开源，如果你觉得还不错的话可以去我们的Github点个⭐，当然也可以扫码支持一下开发团队🤭</view>
+    <view class='margin-top-sm'>Github: </view>
+    <view class='margin-top-sm'>https://github.com/Jason-xy/UESTCBangBang</view>
+  </view>
+</view>

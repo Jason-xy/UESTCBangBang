@@ -12,7 +12,8 @@ Page({
   data: {
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     ColorList: app.globalData.ColorList,
-    randomColor: Math.floor(Math.random()*5)
+    randomColor: Math.floor(Math.random()*5),
+    inputValue:''
   },
 
   attached() {
@@ -46,9 +47,46 @@ Page({
     wx.hideLoading()
   },
 
-  addTags() {
-
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
   },
+
+  bindValue(e){
+    let that = this
+    that.setData({
+      inputValue: e.detail.value
+    })
+    console.log(that)
+  },
+
+  hideModalCancel(e) {
+    this.setData({
+      modalName: null
+    })
+  },
+
+  hideModalConfirm(e) {
+    let that = this
+    this.setData({
+      modalName: null
+    })
+
+    wx.cloud.callFunction({
+      name: "user",
+      data: {
+        op:'addTag', //指定操作类型
+        tags: that.inputValue,
+      },
+      success: function(res) {
+         //查看返回数据
+        console.log(res);
+        console.log(res.result);
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -101,11 +139,11 @@ Page({
           activity: res.result.data[0].activity,
           tags: res.result.data[0].tags
         })
-        console.log('调用云函数', res); 
-        console.log(res.result);
-        console.log(res.result.data);
-        console.log(res.result.data[0]);
-        console.log(that);
+        // console.log('调用云函数', res); 
+        // console.log(res.result);
+        // console.log(res.result.data);
+        // console.log(res.result.data[0]);
+        // console.log(that);
       }
     })
   },

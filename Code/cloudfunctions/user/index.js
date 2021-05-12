@@ -64,7 +64,7 @@ exports.main = async (event, context) => {
     } catch(e) {
       console.error(e)
     }
-  } else if (event.op == 'activityUp') {
+  } else if (event.op == 'activityUp') {//增加活力值
     try {
       return await user.where({
         openid: wxContext.OPENID
@@ -77,6 +77,21 @@ exports.main = async (event, context) => {
     } catch(e) {
       console.error(e)
     }
+  }else if (event.op == 'addTag') {//添加Tag
+    try {
+      return await user.where({
+        openid: wxContext.OPENID
+      })
+      .update({
+         data:{
+          tags: tags.push(event.tags)
+         }
+      })
+    } catch (error) {
+      console.error(error);
+    }
+  }else if (event.op == 'delTag') {//删除Tag
+
   }
 
 }

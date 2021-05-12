@@ -2481,7 +2481,7 @@ button.icon.lg {
 	vertical-align: middle;
 	margin-left: auto;
 	margin-right: auto;
-	width: 380rpx;
+	width: 480rpx;
 	max-width: 100%;
 	background-color: #f8f8f8;
 	border-radius: 20rpx;

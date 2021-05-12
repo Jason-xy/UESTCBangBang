@@ -1,33 +1,32 @@
-<view class="search-container">
-  <view class="search-left">
-    <input type="text" placeholder="    搜索"/>
-  </view>
-  <view class="search-right">
-    <image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcWHdrYxzVMp6oRAztf2t9sZKVzBW0mS4TH5GNZdEARB*zi4OiPrUCCHL84zyNHErFDjOP5B2twGEnMzZ16ijCsg!/b&bo=PAA8AAAAAAADFzI!&rf=viewer_4" />
-  </view>
+<view class="cu-bar search bg-white" style="position: relative; left: 0rpx; top: 0rpx; width: 750rpx; height: 70rpx; display: flex; box-sizing: border-box">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索活动" confirm-type="search"></input>
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow-blur round" style="width: 118rpx; height: 64rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
+    </view>
 </view>
 
-
 <swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
- <block wx:for="{{1}}" wx:key="{{index}}">
- <swiper-item class="item.pictrue">
- <image class="itemImg {{currentIndex == index ? 'active.pictrue': ''}}" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcS3wr5SP77EbrxEz0sXXRzguGndxvutvI8xzY4zZ2HpT*Ily0NvewxlA9IompMPChjmMW3FJ8509v1krD7vnNsw!/b&bo=CQUjAgAAAAADR08!&rf=viewer_4"></image>
- </swiper-item>
- </block>
+  <block wx:for="{{1}}" wx:key="{{index}}">
+  <swiper-item class="item.pictrue">
+    <image class="itemImg {{currentIndex == index ? 'active.pictrue': ''}}" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcS3wr5SP77EbrxEz0sXXRzguGndxvutvI8xzY4zZ2HpT*Ily0NvewxlA9IompMPChjmMW3FJ8509v1krD7vnNsw!/b&bo=CQUjAgAAAAADR08!&rf=viewer_4"></image>
+  </swiper-item>
+  </block>
 
- <block wx:for="{{1}}" wx:key="{{index}}">
- <swiper-item class="item.pictrue">
- <image class="itemImg {{currentIndex == index ? 'active.pictrue': ''}}" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcYnduWh5W.EheNZesjiCLQFbSw9gbEqxV0RtOQSLoZcb08wKvxIfFepZSXGaIdFoD.sTzUJ1efY.riHjsz.51fs!/b&bo=CAUZAgAAAAADV2Q!&rf=viewer_4"></image>
- </swiper-item>
- </block>
+  <block wx:for="{{1}}" wx:key="{{index}}">
+  <swiper-item class="item.pictrue">
+    <image class="itemImg {{currentIndex == index ? 'active.pictrue': ''}}" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcYnduWh5W.EheNZesjiCLQFbSw9gbEqxV0RtOQSLoZcb08wKvxIfFepZSXGaIdFoD.sTzUJ1efY.riHjsz.51fs!/b&bo=CAUZAgAAAAADV2Q!&rf=viewer_4"></image>
+  </swiper-item>
+  </block>
 
- <block wx:for="{{1}}" wx:key="{{index}}">
- <swiper-item class="item.pictrue">
- <image class="itemImg {{currentIndex == index ? 'active.pictrue': ''}}" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcdmPiGV7Asu2kEmmTBwHtgtyWjwPSTOjt7KDSJbNvC8xgYATOQ7sICOXRCp1K8ObP.TktfuqFnMYKcRjtkJ3u.E!/b&bo=EgUdAgAAAAADJwo!&rf=viewer_4"></image>
- </swiper-item>
- </block>
+  <block wx:for="{{1}}" wx:key="{{index}}">
+  <swiper-item class="item.pictrue">
+  <image class="itemImg {{currentIndex == index ? 'active.pictrue': ''}}" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcdmPiGV7Asu2kEmmTBwHtgtyWjwPSTOjt7KDSJbNvC8xgYATOQ7sICOXRCp1K8ObP.TktfuqFnMYKcRjtkJ3u.E!/b&bo=EgUdAgAAAAADJwo!&rf=viewer_4"></image>
+  </swiper-item>
+  </block>
 </swiper>
-
 
 <view class="move">
   <view class="container">
@@ -41,19 +40,19 @@
       <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcfrGOD2GgmSC9JErCYUdBo*QdLvHrTTJoIoCMT2PF1CinIhY.iZt8NI0jBm0lyo14opEouq3Mhcv*RhpRQ1p3nk!/b&bo=8gLNAQAAAAADNy4!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../ball/ball">
+      <navigator class="box" url="../tennis/tennis">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcfrGOD2GgmSC9JErCYUdBo*0qguSsT0byTNyo2*TmkZxkj2kpgIk47vyNXKuay*rL0GSZZb.wd31bU09cxfV1AQ!/b&bo=UAMmAgAAAAADN2U!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../ball/ball">
+      <navigator class="box" url="../tabletennis/tabletennis">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7M9jrqMBzISla7RYpWd1uIjSOEBtP*yFgVD9Py6HQVbuYE0aohLdvymwef7k5kkPJQ!/b&bo=SAMIAgAAAAADN1M!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../ball/ball">
+      <navigator class="box" url="../volleyball/volleyball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7NHTBQ3fUUfKKDr.Flbjw2mxV92QfYGBVnbUq5wKkzRQ4Eif5TC2Oka7LE1tq7rIWY!/b&bo=jANMAgAAAAADN9M!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../ball/ball">
+      <navigator class="box" url="../badminton/badminton">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7PgHhmLyvnDmV273xPEtaI.BOCP2XlpXDn2XmpQFl6iJG6TEr12CGXltDQymbNXMIA!/b&bo=lAMzAgAAAAADN7Q!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../ball/ball">
+      <navigator class="box" url="../football/football">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7MgOF5jix.nfQfKf9ALHj5AqaIa6.wBQZs530EHxOAdUPFE00c0HxyNYfFLRZIgU14!/b&bo=hwMwAgAAAAADR9Q!&rf=viewer_4"></image>
       </navigator>
     </view>
@@ -71,7 +70,7 @@
     </view>
 
     <view class="stMain">
-      <navigator class="stTtem" open-type="switchTab" url="../lease/lease">
+      <navigator class="stTtem" url="../book/book">
         <view class="pic">
           <image src="https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-132170258.jpg"></image>
         </view>
@@ -83,7 +82,7 @@
         </view>
       </navigator>
 
-      <navigator class="stTtem" open-type="switchTab" url="../lease/lease">
+      <navigator class="stTtem" url="../book/book">
         <view class="pic">
           <image src="https://tenfei01.cfp.cn/creative/vcg/veer/800water/veer-310281935.jpg"></image>
         </view>
@@ -95,7 +94,7 @@
         </view>
       </navigator>
 
-      <navigator class="stTtem" open-type="switchTab" url="../release/release">
+      <navigator class="stTtem" url="../book/book">
         <view class="pic">
           <image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcQbBcFUX21J3Ja9*Tf8pJOWp402cQiXpzoRY7sOYG9QjPmyw.HVpAYVAwzxxew.LhV.iflzPUUwz6CwR32WQdYo!/b&bo=UwY4BAAAAAADh8s!&rf=viewer_4"></image>
         </view>
@@ -112,20 +111,14 @@
 </view>
 
 <view class="move"> 
-  <view class="container">
+  <view class="container"> 
     <view class="pubTitle">
       <view class="bar">
         <image mode="widthFix" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcacPEBGV3MjWKftZ20en5oboSRRkwtemDCix7Om.Wtz3un5KOuV8lVQznGnSFXFS*nSbWxAfqKifCXsSZIbMDao!/b&bo=iwBFAAAAAAADF*w!&rf=viewer_4"></image>
       </view>
     </view>
-
-    <view class="moMain">
-      <navigator class="box" open-type="switchTab" url="../lease/lease">
-        <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcYnduWh5W.EheNZesjiCLQGuFCQdDpqi.bEh1TvLUmGzZNBVc9s8Tl.bxia*OGYAcaB5fRx0S8GPRgGwIGClS5Y!/b&bo=PAMKAgAAAAADNyU!&rf=viewer_4"></image>
-      </navigator>
-    </view>
+    <navigator url="../car/car"><image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcbbG*EzimjHMKUgMPJ1DWE*17zME9EJKMdPy5wjMsXwMq.322NZBrxq7.IIGnyupcQAqMkZS4O*u3dtC1zEuxJY!/b&bo=uwI8AQAAAAADJ4Y!&rf=viewer_4" style="width: 702rpx; height: 286rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image></navigator>
   </view>
 </view>
-
 
 <Fd></Fd>

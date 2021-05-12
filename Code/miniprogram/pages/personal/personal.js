@@ -58,6 +58,7 @@ Page({
     that.setData({
       inputValue: e.detail.value
     })
+    console.log(that)
   },
 
   hideModalCancel(e) {

@@ -16,57 +16,26 @@ Page({
     inputValue:''
   },
 
-  attached() {
-    console.log("success")
-    let that = this;
-    wx.showLoading({
-      title: '数据加载中',
-      mask: true,
-    })
-    let i = 0;
-    numDH();
-    function numDH() {
-      if (i < 20) {
-        setTimeout(function () {
-          that.setData({
-            starCount: i,
-            FansTotal: i,
-            visitTotal: i
-          })
-          i++
-          numDH();
-        }, 20)
-      } else {
-        that.setData({
-          starCount: that.coutNum(30),
-          FansTotal: that.coutNum(8),
-          visitTotal: that.coutNum(240)
-        })
-      }
-    }
-    wx.hideLoading()
-  },
-
-  showModal(e) {
+  showModal(e) {//弹出模糊框
     this.setData({
       modalName: e.currentTarget.dataset.target
     })
   },
 
-  bindValue(e){
+  bindValue(e){//获取输入框内容
     let that = this
     that.setData({
       inputValue: e.detail.value
     })
   },
 
-  hideModalCancel(e) {
+  hideModalCancel(e) {//取消添加tag
     this.setData({
       modalName: null
     })
   },
 
-  hideModalConfirm(e) {
+  hideModalConfirm(e) {//确认添加tag
     let that = this
     this.setData({
       modalName: null
@@ -104,7 +73,7 @@ Page({
     })
   },
 
-  delTag(e){
+  delTag(e){//删除tag
     console.log(e)
     let that = this
     wx.showModal({
@@ -194,9 +163,47 @@ Page({
     wx.cloud.callFunction({
       name: 'user',
       data: {
-        op: 'queryCurrent' //指定操作类型 查询所有
+        op: 'queryCurrent' //指定操作类型 查询当前用户
       },
       success: function(res) {
+        //console.log(res)
+        if(res.result.data.length == 0)//如果用户不存在则创建用户
+        {
+          wx.cloud.callFunction({
+            name: "user",
+            data: {
+              op:'add', //指定操作类型
+              image: '', //上传图片后获取的fileid
+              phone: '' , //电话号码字符串
+              activity: 0,
+              tags:['运动', '生活'], //用户标签字符串数组
+            },
+            success: function(res) {
+               //查看返回数据
+              console.log(res);
+              console.log(res.result);
+              console.log(res.result._id);
+              wx.cloud.callFunction({
+                name: 'user',
+                data: {
+                  op: 'queryCurrent' //指定操作类型 查询当前用户
+                },
+                success: function(res) {
+                  //查看返回数据
+                  that.setData({
+                    activity: res.result.data[0].activity,
+                    tags: res.result.data[0].tags
+                  })
+                  // console.log('调用云函数', res); 
+                  // console.log(res.result);
+                  // console.log(res.result.data);
+                  // console.log(res.result.data[0]);
+                  // console.log(that);
+                },
+              })
+            }
+          })
+        }
         //查看返回数据
         that.setData({
           activity: res.result.data[0].activity,

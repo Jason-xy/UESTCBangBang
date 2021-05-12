@@ -18,10 +18,21 @@
                 <view class="cu-tag radius bg-{{ColorList[index+randomColor].name}} light">{{lable}}</view>
         </view>
 
-        <view bindtap="addTags" class="round shadow bg-white margin-sm">
-            <button class="cu-btn sm round icon">+</button>
+        <view class="round shadow bg-white margin-sm">
+            <button class="cu-btn sm round icon" bindtap="showModal" data-target="Image">+</button>
         </view>
     </view>
+
+<view class="cu-modal {{modalName=='Image'?'show':''}}">
+    
+    <view class="cu-dialog">
+        <input type="text" placeholder="添加标签 最多输入5个字" maxlength="5" bindinput="bindValue"></input>
+        <view class="cu-bar bg-white">
+            <view class="margin-0 flex-sub solid-left bg-white " bindtap="hideModalCancel">取消</view>
+            <view class="margin-0 flex-sub solid-left bg-white " bindtap="hideModalConfirm">确定</view>
+        </view>
+    </view>
+</view>
 
     <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 

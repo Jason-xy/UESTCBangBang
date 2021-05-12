@@ -15,7 +15,7 @@
     <view class="padding flex text-center justify-center text-grey bg-white shadow">
 
         <view class="radius shadow bg-white margin-sm" wx:for="{{tags}}" wx:for-item="lable" wx:for-index="index">
-                <view class="cu-tag radius bg-{{ColorList[index+randomColor].name}} light">{{lable}}</view>
+                <view bindtap="delTag" data-txt="{{lable}}" class="cu-tag radius bg-{{ColorList[index+randomColor].name}} light">{{lable}}</view>
         </view>
 
         <view class="round shadow bg-white margin-sm">

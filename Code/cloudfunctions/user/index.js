@@ -84,7 +84,7 @@ exports.main = async (event, context) => {
       })
       .update({
          data:{
-          tags: tags.push(event.tags)
+          tags: _.push(event.tags)
          }
       })
     } catch (error) {

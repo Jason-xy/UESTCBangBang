@@ -58,7 +58,6 @@ Page({
     that.setData({
       inputValue: e.detail.value
     })
-    console.log(that)
   },
 
   hideModalCancel(e) {
@@ -77,12 +76,76 @@ Page({
       name: "user",
       data: {
         op:'addTag', //指定操作类型
-        tags: that.inputValue,
+        tag: that.data.inputValue,
       },
       success: function(res) {
          //查看返回数据
-        console.log(res);
-        console.log(res.result);
+        // console.log(res);
+        // console.log(res.result);
+        wx.cloud.callFunction({
+          name: 'user',
+          data: {
+            op: 'queryCurrent' //指定操作类型 查询所有
+          },
+          success: function(res) {
+            //查看返回数据
+            that.setData({
+              activity: res.result.data[0].activity,
+              tags: res.result.data[0].tags
+            })
+            // console.log('调用云函数', res); 
+            // console.log(res.result);
+            // console.log(res.result.data);
+            // console.log(res.result.data[0]);
+            // console.log(that);
+          }
+        })
+      }
+    })
+  },
+
+  delTag(e){
+    console.log(e)
+    let that = this
+    wx.showModal({
+      title: '提示',
+      content: '是否删除这个标签',
+      success (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+          wx.cloud.callFunction({
+            name: "user",
+            data: {
+              op:'removeTag', //指定操作类型
+              tag: e.currentTarget.dataset.txt,
+            },
+            success: function(res) {
+               //查看返回数据
+              // console.log(res);
+              // console.log(res.result);
+              wx.cloud.callFunction({
+                name: 'user',
+                data: {
+                  op: 'queryCurrent' //指定操作类型 查询所有
+                },
+                success: function(res) {
+                  //查看返回数据
+                  that.setData({
+                    activity: res.result.data[0].activity,
+                    tags: res.result.data[0].tags
+                  })
+                  // console.log('调用云函数', res); 
+                  // console.log(res.result);
+                  // console.log(res.result.data);
+                  // console.log(res.result.data[0]);
+                  // console.log(that);
+                }
+              })
+            }
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
       }
     })
   },

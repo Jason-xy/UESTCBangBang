@@ -122,5 +122,39 @@ Page({
         console.log(res.result.stats.updated);//更新的记录条数
       } 
     })
+  },
+
+  addTag: function() {
+    wx.cloud.callFunction({
+      name: 'user',
+      data: {
+        op: 'addTag',
+        tag: 'testTag',
+      },
+      success: function(res) {
+         //查看返回数据
+         console.log(res); 
+         console.log(res.result);
+         console.log(res.result.stats);
+         console.log(res.result.stats.updated);//更新的记录条数
+      }
+    })
+  },
+
+  removeTag: function() {
+    wx.cloud.callFunction({
+      name: 'user',
+      data: {
+        op: 'removeTag',
+        tag: 'testTag'
+      },
+      success: function(res) {
+         //查看返回数据
+         console.log(res); 
+         console.log(res.result);
+         console.log(res.result.stats);
+         console.log(res.result.stats.updated);//更新的记录条数
+      }
+    })
   }
 })

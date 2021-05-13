@@ -1,11 +1,12 @@
 {
   "pages": [
-    "pages/activities/activities",
-    "pages/personal/personal",
+    
     "pages/userTest/test",
+    "pages/sendMessageTest/sendMessageTest",
     "pages/activityTest/activityTest",
     "pages/itemTest/itemTest",
-    "pages/test/test",
+    "pages/activities/activities",
+
     "pages/ball/ball",
     "pages/lease/lease",
     "pages/release/release",
@@ -18,6 +19,7 @@
     "pages/badminton/badminton",
     "pages/football/football",
     "pages/personal/support/support",
+    "pages/personal/personal",
     "pages/personal/myactivities/myactivities"
   ],
   "window": {

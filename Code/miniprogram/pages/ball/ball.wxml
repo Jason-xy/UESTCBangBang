@@ -1,14 +1,62 @@
 <Hd></Hd>
-<view class="box">
-  <view class=".container0">
-    <text>名字：张三\n运动：篮球\n人数：5人\n地点：校篮球场4号\n时间：4.12日下午五点\n备注：无</text>
-  </view>
+<view class="padding-xl radius shadow-warp bg-white margin-top" style="width: 750rpx; height: 94rpx; display: block; box-sizing: border-box; left: 1rpx; top: -30rpx; position: relative; position:fixed; z-index:2">
+  <view  bindtap="onLoad1" data-index="篮球" class="cu-tag radius" style="position: relative; left: -29rpx; top: -24rpx; width: 80rpx; height: 48rpx; display: inline-flex; box-sizing: border-box; color:olive;"> 篮球</view>
+  <view  bindtap="onLoad2" data-index="网球" class="cu-tag radius" style="position: relative; left: 4rpx; top: -24rpx; width: 80rpx; height: 48rpx; display: inline-flex; box-sizing: border-box; color:orange;"> 网球 </view>
+  <view  bindtap="onLoad3" data-index="乒乓球" class="cu-tag radius" style="position: relative; left: 26rpx; top: -24rpx; color:green;"> 乒乓球 </view>
+  <view  bindtap="onLoad4" data-index="排球" class="cu-tag radius" style="position: relative; left: 42rpx; top: -24rpx; color:purple;"> 排球 </view>
+  <view  bindtap="onLoad5" data-index="羽毛球" class="cu-tag radius" style="position: relative; left: 70rpx; top: -24rpx"> 羽毛球 </view>
+  <view  bindtap="onLoad6" data-index="足球" class="cu-tag radius" style="position: relative; left: 88rpx; top: -24rpx; color:red;"> 足球 </view>
 </view>
 
-<view class="box">
-  <view class=".container1">
-    <text>名字：张三\n运动：篮球\n人数：5人\n地点：校篮球场4号\n时间：4.12日下午五点\n备注：无</text>
+<view wx:for="{{data}}" wx:key="_id" style="z-index:1;">
+  <view class="cu-list menu-avatar comment solids-top">
+
+    <view class="cu-bar bg-white margin-top" style="position: relative; left: 1rpx; top: -24rpx">  
+      <view class="action">
+        <text class="cuIcon-title text-orange "></text> 审核通过
+      </view>
+      <view class="cu-item text-cyan cuIcon-favor"></view>
+      <view class="action">
+        <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal" style="width: 184rpx; height: 64rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">加入</button>
+      </view>
+    </view>
+    <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+      <view class="cu-dialog">
+        <view class="cu-bar bg-white justify-end">
+          <view class="content">申请通知</view>
+          <view class="action" bindtap="hideModal">
+            <text class="cuIcon-close text-red"></text>
+          </view>
+        </view>
+        <view class="padding-xl">
+          申请已发送给发布者，请耐心等待结果通知
+        </view>
+      </view>
+    </view>
+  
+    <view class="cu-item" style="position: relative; left: 1rpx; top: -22rpx">
+      <view class="cu-avatar round" style="background-image:url(https://t7.baidu.com/it/u=2780797146,595893742&fm=193&f=GIF);"></view>
+      <view class="content">
+        <view class="text-grey">{{item.name}}</view>
+        <view class="text-gray text-content text-df">
+            {{item.startTime}}，{{item.address}}，需要{{item.total}}人
+        </view>
+        <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+          <view class="flex">
+            <view>备注：</view>
+            <view class="flex-sub">{{item.remarks}}</view>
+          </view>
+        </view>
+        <view class="margin-top-sm flex justify-between">
+          <view class="text-gray text-df">联系方式：{{item.contact}}</view>
+          <view>
+            <text class="cuIcon-appreciatefill text-red"></text>
+            <text class="cuIcon-messagefill text-gray margin-left-sm"></text>
+          </view> 
+        </view>
+      </view>
+    </view>  
   </view>
 </view>
-
+ 
 <Fd></Fd>

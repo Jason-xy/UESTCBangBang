@@ -166,7 +166,7 @@ Page({
         op: 'queryCurrent' //指定操作类型 查询当前用户
       },
       success: function(res) {
-        //console.log(res)
+        console.log(res)
         if(res.result.data.length == 0)//如果用户不存在则创建用户
         {
           wx.cloud.callFunction({

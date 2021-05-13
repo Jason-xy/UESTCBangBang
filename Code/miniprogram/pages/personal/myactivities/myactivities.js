@@ -5,14 +5,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    basics: 0,
+    num: 0,
+    scroll: 0,
+    data:[],
+    openid:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let that = this;
+      wx.cloud.callFunction({
+        name: 'user',
+        data: {
+          op: 'queryCurrent' //指定操作类型
+        },
+        success: function(res) {
+          console.log(res.result.data[0].openid)
+          that.setData({
+            openid: res.result.data[0].openid
+          })
+          wx.cloud.callFunction({
+            name: 'activity',
+            data: {
+              op: 'queryByMasterid',
+              masterid: res.result.data[0].openid, //当前用户的openid
+            },
+            success: function(res) {
+              that.setData({
+                data:res.result.data
+              })
+                //查看返回数据
+                console.log(res);
+                console.log(res.result);
+                console.log(res.result.data);
+                console.log(res.result.data[0]);
+            }
+          })
+          //查看返回数据
+          console.log(res); 
+          console.log(res.result);
+          console.log(res.result.data);
+          console.log(res.result.data[0]);
+        }
+      })
   },
 
   /**

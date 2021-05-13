@@ -10,14 +10,8 @@
     "pages/ball/ball",
     "pages/lease/lease",
     "pages/release/release",
-    "pages/movement/movement",
-    "pages/book/book",
-    "pages/car/car",
-    "pages/tennis/tennis",
-    "pages/tabletennis/tabletennis",
-    "pages/volleyball/volleyball",
-    "pages/badminton/badminton",
-    "pages/football/football",
+ 
+
     "pages/personal/support/support",
     "pages/personal/personal",
     "pages/personal/myactivities/myactivities"

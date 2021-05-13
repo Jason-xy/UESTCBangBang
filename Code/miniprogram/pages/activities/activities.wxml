@@ -40,26 +40,25 @@
       <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcfrGOD2GgmSC9JErCYUdBo*QdLvHrTTJoIoCMT2PF1CinIhY.iZt8NI0jBm0lyo14opEouq3Mhcv*RhpRQ1p3nk!/b&bo=8gLNAQAAAAADNy4!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../tennis/tennis">
+      <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcfrGOD2GgmSC9JErCYUdBo*0qguSsT0byTNyo2*TmkZxkj2kpgIk47vyNXKuay*rL0GSZZb.wd31bU09cxfV1AQ!/b&bo=UAMmAgAAAAADN2U!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../tabletennis/tabletennis">
+      <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7M9jrqMBzISla7RYpWd1uIjSOEBtP*yFgVD9Py6HQVbuYE0aohLdvymwef7k5kkPJQ!/b&bo=SAMIAgAAAAADN1M!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../volleyball/volleyball">
+      <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7NHTBQ3fUUfKKDr.Flbjw2mxV92QfYGBVnbUq5wKkzRQ4Eif5TC2Oka7LE1tq7rIWY!/b&bo=jANMAgAAAAADN9M!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../badminton/badminton">
+      <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7PgHhmLyvnDmV273xPEtaI.BOCP2XlpXDn2XmpQFl6iJG6TEr12CGXltDQymbNXMIA!/b&bo=lAMzAgAAAAADN7Q!&rf=viewer_4"></image>
       </navigator>
-      <navigator class="box" url="../football/football">
+      <navigator class="box" url="../ball/ball">
         <image class="pic" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcSTH5MGD*BAzQVxRXcnQR7MgOF5jix.nfQfKf9ALHj5AqaIa6.wBQZs530EHxOAdUPFE00c0HxyNYfFLRZIgU14!/b&bo=hwMwAgAAAAADR9Q!&rf=viewer_4"></image>
       </navigator>
     </view>
 
   </view>
 </view>
-
 
 <view class="study">
   <view class="container">
@@ -70,7 +69,7 @@
     </view>
 
     <view class="stMain">
-      <navigator class="stTtem" url="../book/book">
+      <navigator class="stTtem" open-type="switchTab" url="../lease/lease">
         <view class="pic">
           <image src="https://tenfei04.cfp.cn/creative/vcg/veer/800water/veer-132170258.jpg"></image>
         </view>
@@ -82,7 +81,7 @@
         </view>
       </navigator>
 
-      <navigator class="stTtem" url="../book/book">
+      <navigator class="stTtem" open-type="switchTab" url="../lease/lease">
         <view class="pic">
           <image src="https://tenfei01.cfp.cn/creative/vcg/veer/800water/veer-310281935.jpg"></image>
         </view>
@@ -94,7 +93,7 @@
         </view>
       </navigator>
 
-      <navigator class="stTtem" url="../book/book">
+      <navigator class="stTtem" open-type="switchTab" url="../lease/lease">
         <view class="pic">
           <image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcQbBcFUX21J3Ja9*Tf8pJOWp402cQiXpzoRY7sOYG9QjPmyw.HVpAYVAwzxxew.LhV.iflzPUUwz6CwR32WQdYo!/b&bo=UwY4BAAAAAADh8s!&rf=viewer_4"></image>
         </view>
@@ -117,7 +116,7 @@
         <image mode="widthFix" src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcacPEBGV3MjWKftZ20en5oboSRRkwtemDCix7Om.Wtz3un5KOuV8lVQznGnSFXFS*nSbWxAfqKifCXsSZIbMDao!/b&bo=iwBFAAAAAAADF*w!&rf=viewer_4"></image>
       </view>
     </view>
-    <navigator url="../car/car"><image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcbbG*EzimjHMKUgMPJ1DWE*17zME9EJKMdPy5wjMsXwMq.322NZBrxq7.IIGnyupcQAqMkZS4O*u3dtC1zEuxJY!/b&bo=uwI8AQAAAAADJ4Y!&rf=viewer_4" style="width: 702rpx; height: 286rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image></navigator>
+    <navigator open-type="switchTab" url="../lease/lease"><image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcbbG*EzimjHMKUgMPJ1DWE*17zME9EJKMdPy5wjMsXwMq.322NZBrxq7.IIGnyupcQAqMkZS4O*u3dtC1zEuxJY!/b&bo=uwI8AQAAAAADJ4Y!&rf=viewer_4" style="width: 702rpx; height: 286rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image></navigator>
   </view>
 </view>
 

@@ -1,53 +1,86 @@
-<view class="topbox" style="width: 1500rpx; height: 106rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
-  <view class="cu-bar bg-white margin-top" style="position: fixed; left: 1rpx; top: -34rpx; width: 750rpx; height: 120rpx; display: flex; box-sizing: border-box">
-  <view class="action">
-    <text class="cuIcon-title text-orange "></text> 服务条款说明
+<view class="cu-bar bg-white tabbar border shop" style="position: fixed; left: 1rpx; top: 0rpx; width: 750rpx; height: 60rpx; box-sizing: border-box; z-index:2; display:flex">
+  <view class="cu-bar bg-white margin-top" style="position: relative; left: 1rpx; top: -32rpx">
+    <view class="action">
+      <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal" style="width: 172rpx; height: 64rpx; display: flex; box-sizing: border-box; left: 552rpx; top: 15rpx; position: relative">条款</button>
+    </view>
   </view>
-  <view class="action" style="width: 216rpx; height: 100rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
-    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal" style="position: relative; left: 2rpx; top: 0rpx">查看</button>
+  <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content">声名</view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+      <view class="padding-xl" style="white-space:pre-wrap">
+      本程序为免费小程序，用户可非商业性地使用，且用户应在遵守法律的前提下使用本软件
+      用户是自愿使用本程序的，在租借交易时，双方本着互帮互助的原则进行，一切恶意的，欺诈的行为是不允许的，同时，本程序对交易双方的行为不负责
+      </view>
+    </view>
+  </view>
+  <view bindtap="onLoad" data-index="运动" class="action" style="position: relative; left: -180rpx; top: -3rpx">
+    <view class="cu-item text-cyan cuIcon-footprint">
+    </view>
+    <view> 运动 </view>
+  </view>
+  <view bindtap="onLoad1" data-index="书" class="action" style="position: relative; left: -222rpx; top: -3rpx; width: 140rpx; height: 72rpx; display: block; box-sizing: border-box">
+    <view class="cu-item text-purple cuIcon-edit">
+    </view>
+    <view> 书 </view>
+  </view>
+  <view bindtap="onLoad2" data-index="拼车" class="action" style="position: relative; left: -262rpx; top: -2rpx; width: 140rpx; height: 72rpx; display: block; box-sizing: border-box">
+    <view class="cu-item text-yellow cuIcon-taxi">
+      <view class="bg-pink cu-tag badge">saft</view>
+    </view>
+    <view> 拼车 </view>
   </view>
 </view>
-<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+
+
+
+<view wx:for="{{data}}" wx:key="_id" style="z-index:1; padding-top:44px">
+<view class="cu-timeline" style="width: 750rpx; height: 614rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx;">
+  <view class="cu-time"><text decode>&nbsp;&nbsp;UESTCBangBang</text></view> 
+
+  <image src="{{item.image}}" style="width: 242rpx; height: 336rpx; display: inline-block; box-sizing: border-box; left: 22rpx; top: 72rpx; position: relative"></image> 
+
+  <view class="cu-item" style="width: 500rpx; height: 540rpx; display: block; box-sizing: border-box; left: 225rpx; top: -364rpx; position: relative">
+    <view class="content" style="width: 378rpx; height: 502rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"> 
+      <view class="cu-capsule radius"> 
+        <view class="cu-tag bg-cyan">时间</view>
+        <view class="cu-tag line-cyan">{{item.startTime}}</view>
+      </view>
+      <view class="margin-top" style="width: 334rpx; height: 370rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"><text>物品：{{item.name}}\n交易地点：{{item.address}}\n联系方式：{{item.contact}}\n归还时间：{{item.endTime}}\n价格：{{item.price}}\n备注：{{item.remarks}}\n</text></view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-bar bg-white margin-top" style="position: relative; left: -1rpx; top: -31rpx">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 心动
+  </view>
+  <view class="action" style="width: 156rpx; height: 64rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="DialogModal1" style="width: 176rpx; height: 72rpx; display: flex; box-sizing: border-box; left: -20rpx; top: -8rpx">确认</button>
+  </view>
+</view>
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
   <view class="cu-dialog">
     <view class="cu-bar bg-white justify-end">
-      <view class="content">服务条款</view>
+      <view class="content">申请确认</view>
       <view class="action" bindtap="hideModal">
         <text class="cuIcon-close text-red"></text>
       </view>
     </view>
-    <view class="padding-xl" style="white-space:pre-wrap">
-      本程序为免费小程序，用户可非商业性地使用，且用户应在遵守法律的前提下使用本软件
-      用户是自愿使用本程序的，在租借交易时，双方本着互帮互助的原则进行，一切恶意的，欺诈的行为是不允许的，同时，本程序对交易双方的行为不负责
+    <view class="padding-xl">
+      你确定要申请此项活动吗？
+    </view>
+    <view class="cu-bar bg-white">
+      <view class="action margin-0 flex-sub text-green solid-left" bindtap="hideModal">确认</view>
     </view>
   </view>
 </view>
+<view class="container">
+  <view class="divLine"></view>
 </view>
-
-<view class="cu-timeline">
-  <view class="cu-item cur text-orange cuIcon-tag" style="position: relative; left: 0rpx; top: 96rpx">
-  
-    <navigator class="content bg-yellow shadow-blur" url="../movement/movement">
-      <view>【运动】</view> 在此你可以找到自己想要租用的球类器材
-    </navigator>
-    <view class="bg-cyan content">
-      <text> 生命在于运动，运动源于健康 </text> 
-    </view>
-  </view>
-
-  <view class="cu-item text-pink cuIcon-edit" style="position: relative; left: 0rpx; top: 96rpx">
-    <navigator class="content bg-olive shadow-blur" url="../book/book">
-      <view>【书本】</view>  好货不压箱，来看看一些有用的二手书吗？
-    </navigator>
-    <view class="bg-cyan content">
-      <text> 学习成就梦想，拼搏展现未来 </text> 
-    </view>
-  </view>
-  <view class="cu-item text-blue cuIcon-taxi" style="position: relative; left: 0rpx; top: 96rpx">
-    <navigator class="content bg-purple shadow-blur" url="../car/car">
-      <view>【拼车】</view>  车车 车车  怎么样一起坐车车
-    </navigator>
-    <view class="bg-cyan content">
-      <text> 爱拼享自由，拼车快乐行</text> 
-    </view>
-  </view>
 </view>

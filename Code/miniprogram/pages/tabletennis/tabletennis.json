@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "Hd":"../../components/Hd/Hd",
-    "Fd":"../../components/Fd/Fd"
-  },
-  "navigationBarTitleText":"运动-乒乓球"
-}  

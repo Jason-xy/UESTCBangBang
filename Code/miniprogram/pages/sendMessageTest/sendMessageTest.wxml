@@ -1,0 +1,4 @@
+<!--miniprogram/pages/sendMessageTest/sendMessageTest.wxml-->
+<button bindtap="request">获取模板消息id</button>
+<button bindtap="subscribeMessage">订阅指定消息</button>
+<button bindtap="send">发布消息</button>

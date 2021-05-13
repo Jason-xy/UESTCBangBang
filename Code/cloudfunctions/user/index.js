@@ -11,6 +11,8 @@ exports.main = async (event, context) => {
   const db = cloud.database();
   //user集合对象
   const user = db.collection('user');
+
+  const _ = db.command;
   
   if(event.op == 'add') { //添加记录
     try {
@@ -76,6 +78,32 @@ exports.main = async (event, context) => {
       })
     } catch(e) {
       console.error(e)
+    }
+  } else if(event.op == 'addTag') {
+    try {
+      return await user.where({
+        openid: wxContext.OPENID,
+      })
+      .update({
+        data: {
+          tags: _.push([event.tag])
+        }
+      })
+    } catch (e) {
+      console.error(e);
+    }
+  } else if(event.op == 'removeTag') {
+    try {
+      return await user.where({
+        openid: wxContext.OPENID,
+      })
+      .update({
+        data: {
+          tags: _.pullAll([event.tag])
+        }
+      })
+    } catch (e) {
+      console.error(e);
     }
   }
 

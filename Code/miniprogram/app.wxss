@@ -1,4 +1,7 @@
 @import "./style/iconfont.wxss";
+@import "./style/colorui/main.wxss";
+@import "./style/colorui/icon.wxss";
+
 page,view,text,swiper,swiper-item,image,navigator{
   padding:0;
   margin:0;

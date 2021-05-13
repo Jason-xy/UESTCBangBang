@@ -1,33 +1,53 @@
-<view class="container">
-  <view class="nav_left">
-    <block wx:for="{{cateItems}}">
-      <!--当前项的id等于item项的id，那个就是当前状态-->
-      <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
-      <view class="nav_left_items {{curNav == item.cate_id ? 'active' : ''}}" bindtap="switchRightTab"   data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
-      </block>
+<view class="topbox" style="width: 1500rpx; height: 106rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <view class="cu-bar bg-white margin-top" style="position: fixed; left: 1rpx; top: -34rpx; width: 750rpx; height: 120rpx; display: flex; box-sizing: border-box">
+  <view class="action">
+    <text class="cuIcon-title text-orange "></text> 服务条款说明
   </view>
-  
-  <view class="nav_right">
-      <!--如果有数据，才遍历项-->
-      <view wx:if="{{cateItems[curIndex].ishaveChild}}">
-        <block wx:for="{{cateItems[curIndex].children}}">
-          <view class="container">
-              <view class="goTtem">
-                <view class="pic">
-                  <image src="{{item.image}}"></image>
-                </view>
-                <view class="txt">
-                  <view class="title"><text>{{item.name}}</text></view>
-                  <view class="info">
-                    <text>发布者：{{item.initiator}}\n{{item.money}}\n{{item.time}}\n{{item.trip}}\n{{item.number}}\n备注：{{item.remarks}}</text>
-                  </view>
-                </view>
-              </view>
-              <button class="add">{{item.buName}}</button>
-          </view>
-        </block>
+  <view class="action" style="width: 216rpx; height: 100rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="Modal" style="position: relative; left: 2rpx; top: 0rpx">查看</button>
+  </view>
+</view>
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">服务条款</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
       </view>
-  <!--如果无数据，则显示数据-->
-  <view class="nodata_text" wx:else>该分类暂无数据</view>
+    </view>
+    <view class="padding-xl" style="white-space:pre-wrap">
+      本程序为免费小程序，用户可非商业性地使用，且用户应在遵守法律的前提下使用本软件
+      用户是自愿使用本程序的，在租借交易时，双方本着互帮互助的原则进行，一切恶意的，欺诈的行为是不允许的，同时，本程序对交易双方的行为不负责
+    </view>
+  </view>
+</view>
+</view>
+
+<view class="cu-timeline">
+  <view class="cu-item cur text-orange cuIcon-tag" style="position: relative; left: 0rpx; top: 96rpx">
+  
+    <navigator class="content bg-yellow shadow-blur" url="../movement/movement">
+      <view>【运动】</view> 在此你可以找到自己想要租用的球类器材
+    </navigator>
+    <view class="bg-cyan content">
+      <text> 生命在于运动，运动源于健康 </text> 
+    </view>
+  </view>
+
+  <view class="cu-item text-pink cuIcon-edit" style="position: relative; left: 0rpx; top: 96rpx">
+    <navigator class="content bg-olive shadow-blur" url="../book/book">
+      <view>【书本】</view>  好货不压箱，来看看一些有用的二手书吗？
+    </navigator>
+    <view class="bg-cyan content">
+      <text> 学习成就梦想，拼搏展现未来 </text> 
+    </view>
+  </view>
+  <view class="cu-item text-blue cuIcon-taxi" style="position: relative; left: 0rpx; top: 96rpx">
+    <navigator class="content bg-purple shadow-blur" url="../car/car">
+      <view>【拼车】</view>  车车 车车  怎么样一起坐车车
+    </navigator>
+    <view class="bg-cyan content">
+      <text> 爱拼享自由，拼车快乐行</text> 
+    </view>
   </view>
 </view>

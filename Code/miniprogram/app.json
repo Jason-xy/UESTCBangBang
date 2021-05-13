@@ -1,20 +1,32 @@
 {
   "pages": [
+    
+    "pages/userTest/test",
     "pages/sendMessageTest/sendMessageTest",
     "pages/activityTest/activityTest",
-    "pages/activities/activities",
     "pages/itemTest/itemTest",
-    "pages/userTest/test",
+    "pages/activities/activities",
+
     "pages/ball/ball",
     "pages/lease/lease",
     "pages/release/release",
-    "pages/personal/personal"
+    "pages/movement/movement",
+    "pages/book/book",
+    "pages/car/car",
+    "pages/tennis/tennis",
+    "pages/tabletennis/tabletennis",
+    "pages/volleyball/volleyball",
+    "pages/badminton/badminton",
+    "pages/football/football",
+    "pages/personal/support/support",
+    "pages/personal/personal",
+    "pages/personal/myactivities/myactivities"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "活动",
+    "navigationBarTitleText": "成电帮帮",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },

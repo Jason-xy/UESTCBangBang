@@ -1,25 +1,19 @@
 {
   "pages": [
-    
-    "pages/test/activityTest/activityTest",
     "pages/activities/activities",
-    
+    "pages/test/activityTest/activityTest",
     "pages/test/userTest/test",
     "pages/test/sendMessageTest/sendMessageTest",
-
     "pages/test/itemTest/itemTest",
-    
-
     "pages/ball/ball",
     "pages/lease/lease",
     "pages/release/release",
     "pages/release/activity release/activity release",
     "pages/release/item release/item release",
- 
-
     "pages/personal/support/support",
     "pages/personal/personal",
-    "pages/personal/myactivities/myactivities"
+    "pages/personal/myactivities/myactivities",
+    "pages/personal/participated/participated"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

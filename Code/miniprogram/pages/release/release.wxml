@@ -23,7 +23,7 @@
 </view>
 
 <view class="padding flex flex-wrap justify-between align-center bg-white">
-  <navigator url="../activity release/activity release"><button class="cu-btn round bg-gradual-green padding radius text-center shadow-blur" style="position: relative; left: 30rpx; top: 2rpx; width: 526rpx; height: 64rpx; display: flex; box-sizing: border-box">活动发布</button></navigator>
+  <navigator url="activity release/activity release"><button class="cu-btn round bg-gradual-green padding radius text-center shadow-blur" style="position: relative; left: 30rpx; top: 2rpx; width: 526rpx; height: 64rpx; display: flex; box-sizing: border-box">活动发布</button></navigator>
   <button class="cu-btn icon" style="position: relative; left: 30rpx; top: -1rpx">
     <text class="cuIcon-emojifill"></text>
   </button>
@@ -48,7 +48,7 @@
 </view>
 
 <view class="padding flex flex-wrap justify-between align-center bg-white">
-  <navigator url="../item release/item release"><button class="cu-btn round bg-gradual-purple padding radius text-center shadow-blur" style="position: relative; left: 26rpx; top: -4rpx; width: 532rpx; height: 64rpx; display: flex; box-sizing: border-box">物品发布</button></navigator>
+  <navigator url="item release/item release"><button class="cu-btn round bg-gradual-purple padding radius text-center shadow-blur" style="position: relative; left: 26rpx; top: -4rpx; width: 532rpx; height: 64rpx; display: flex; box-sizing: border-box">物品发布</button></navigator>
   <button class="cu-btn icon" style="position: relative; left: 30rpx; top: 0rpx">
     <text class="cuIcon-emojifill"></text>
   </button>

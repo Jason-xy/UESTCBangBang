@@ -1,0 +1,63 @@
+<view class="cu-bar bg-gradual-blue padding radius text-center shadow-blur search" style="width: 750rpx; height: 94rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+  <view class="cu-avatar round" style="background-image:url(http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcc6A7E7RWGrVXW4r*9SCiDH6GqKaZ5vx*0Ck15aWL4l43F9hQtdlPQ*5OlAFydiq*TT8OtEUu0hP1GzvJd3h7nk!/b&bo=wAOoAgAAAAABF1k!&rf=viewer_4);"></view>
+  <view class="content">
+      选择类型
+  </view>
+  <view class="action">
+    <text class="cuIcon-discover"></text>
+  </view>
+</view>
+
+<view class="solids-bottom padding-xs flex align-center">
+  <view class="padding cuIcon-global text-blue"></view>
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xsl padding" style="position: relative; left: 4rpx; top: 5rpx; width: 700rpx; height: 242rpx; display: block; box-sizing: border-box">
+        <image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcYUcyqYirnzlk2xPNwFmgL*HGP3aweQf2AxlHN5wgxamvhtuarOucfY6EKFg.ZxAXxK4vr2oqbE3Bh12qBoaKKo!/b&bo=uANIAbgDSAEDNxI!&rf=viewer_4" style="width: 630rpx; height: 191rpx; display: inline-block; box-sizing: border-box; left: -29rpx; top: 2rpx; position: relative"></image>
+    </view>
+    <view class="padding  text-orange">活动发布，组织时间进行多项球类活动</view>
+  </view>
+</view>
+
+<view class="container">
+  <view class="divLine"></view>
+</view>
+
+<view class="padding flex flex-wrap justify-between align-center bg-white">
+  <navigator url="../activity release/activity release"><button class="cu-btn round bg-gradual-green padding radius text-center shadow-blur" style="position: relative; left: 30rpx; top: 2rpx; width: 526rpx; height: 64rpx; display: flex; box-sizing: border-box">活动发布</button></navigator>
+  <button class="cu-btn icon" style="position: relative; left: 30rpx; top: -1rpx">
+    <text class="cuIcon-emojifill"></text>
+  </button>
+</view>
+
+<view class="container">
+  <view class="divLine"></view>
+</view>
+
+<view class="solids-bottom padding-xs flex align-center">
+  <view class="padding cuIcon-sponsor text-brown"></view>
+  <view class="flex-sub text-center">
+    <view class="solid-bottom text-xsl padding" style="position: relative; left: 4rpx; top: 5rpx; width: 700rpx; height: 242rpx; display: block; box-sizing: border-box">
+        <image src="http://m.qpic.cn/psc?/V53LW8u82N2ReE3iSV630nPeZ21RLSYt/45NBuzDIW489QBoVep5mcakyvnl17XlgzFDbXudO3b5slL3blUte.T9pe3BuLr*aCxcsT006uQjVFD6JT*kJQS4YC7RaWG*naBxfEaBG2D4!/b&bo=vgNUAb4DVAEDNxI!&rf=viewer_4" style="width: 630rpx; height: 191rpx; display: inline-block; box-sizing: border-box; left: -29rpx; top: 2rpx; position: relative"></image>
+    </view>
+    <view class="padding  text-mauve">物品租借，多类教材和运动器械棒棒棒</view>
+  </view>
+</view>
+
+<view class="container">
+  <view class="divLine"></view>
+</view>
+
+<view class="padding flex flex-wrap justify-between align-center bg-white">
+  <navigator url="../item release/item release"><button class="cu-btn round bg-gradual-purple padding radius text-center shadow-blur" style="position: relative; left: 26rpx; top: -4rpx; width: 532rpx; height: 64rpx; display: flex; box-sizing: border-box">物品发布</button></navigator>
+  <button class="cu-btn icon" style="position: relative; left: 30rpx; top: 0rpx">
+    <text class="cuIcon-emojifill"></text>
+  </button>
+</view>
+
+<view class="container">
+  <view class="divLine"></view>
+</view>
+
+<view class="footer">
+  <view class="text">- UESTCBangBang -</view>
+</view>

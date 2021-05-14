@@ -1,11 +1,14 @@
-<view class="cu-bar search bg-white" style="position: relative; left: 0rpx; top: 0rpx; width: 750rpx; height: 70rpx; display: flex; box-sizing: border-box">
-    <view class="search-form round">
-      <text class="cuIcon-search"></text>
-      <input type="text" placeholder="搜索活动" confirm-type="search"></input>
+<view class="container">
+  <view class="divLine"></view>
+</view>
+
+<view class="padding-xl radius shadow-warp bg-white margin-top" style="width: 750rpx; height: 76rpx; display: block; box-sizing: border-box; left: 1rpx; top: -32rpx; position: relative">
+  <view class="container hdCon">
+    <view class="right">
+      <text style="white-space:pre-wrap">
+        <text class="cuIcon-emoji text-cyan"></text><text class="cuIcon-appreciate text-olive"></text><text class="cuIcon-appreciatefill text-green"></text>                  - 成电帮帮 -  - 便利你的大学生活 -</text>
     </view>
-    <view class="action">
-      <button class="cu-btn bg-green shadow-blur round" style="width: 118rpx; height: 64rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">搜索</button>
-    </view>
+  </view>
 </view>
 
 <swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>

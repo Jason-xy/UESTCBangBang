@@ -2,10 +2,11 @@
   "pages": [
     
     "pages/activities/activities",
-    "pages/userTest/test",
-    "pages/sendMessageTest/sendMessageTest",
-    "pages/activityTest/activityTest",
-    "pages/itemTest/itemTest",
+    
+    "pages/test/userTest/test",
+    "pages/test/sendMessageTest/sendMessageTest",
+    "pages/test/activityTest/activityTest",
+    "pages/test/itemTest/itemTest",
     
 
     "pages/ball/ball",

@@ -190,6 +190,24 @@ Page({
         console.log(res.result.data[0]);
       }
     })
+  },
+
+  //查询指定用户参与的所有活动
+  queryByMember: function() { 
+    wx.cloud.callFunction({
+      name: 'activity',
+      data: {
+        op: 'queryByMember',
+        memberId: "oYsqu5benqiKEg1xbcdHjTpCMePI" //用户的openid
+      },
+      success: function(res) {
+          //查看返回数据
+          console.log(res);
+          console.log(res.result);
+          console.log(res.result.data);
+          console.log(res.result.data[0]);
+      }
+    })
   }
 
 })

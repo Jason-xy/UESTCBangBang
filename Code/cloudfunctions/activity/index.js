@@ -113,6 +113,14 @@ exports.main = async (event, context) => {
     } catch (error) {
       console.error(error);
     }
+  }  else if(event.op = 'queryByMember') { //查询指定用户参与的所有活动
+    try{
+      return await activity.where({
+        members: _.all([event.memberId])
+      }).get();
+    } catch (error) {
+      console.error(error);
+    }
   } else if(event.op = 'queryByType') {  //查询某一类型活动
     try{
       return await activity.where({
@@ -121,5 +129,5 @@ exports.main = async (event, context) => {
     } catch (error) {
       console.error(error);
     }
-  } 
+  }
 }

@@ -1,11 +1,12 @@
 {
   "pages": [
     
+    "pages/test/activityTest/activityTest",
     "pages/activities/activities",
     
     "pages/test/userTest/test",
     "pages/test/sendMessageTest/sendMessageTest",
-    "pages/test/activityTest/activityTest",
+
     "pages/test/itemTest/itemTest",
     
 

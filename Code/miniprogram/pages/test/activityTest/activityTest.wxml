@@ -9,3 +9,4 @@
 <button bindtap="finishActivity">完成活动</button>
 <button bindtap="removeActivity">删除活动（根据_id）</button>
 <button bindtap="queryAll">查询所有活动信息</button>
+<button bindtap="queryByMember">查询指定用户参与的活动</button>

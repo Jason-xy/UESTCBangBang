@@ -1,0 +1,72 @@
+<form bindsubmit="formSubmit">
+<view class="cu-form-group margin-top">
+	<view class="title">物品名称</view>
+  <input placeholder="简单描述" name="name" type='string' value='{{name}}' bindblur='nameBlur'></input>
+  <text class="cuIcon-present text-pink"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">联系方式</view>
+	<input placeholder="电话 📞Tel" name="contact" class='textarea' value='{{info}}' bindblur='contactBlur'></input>
+	<text class="cuIcon-phone text-orange"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">物品租金</view>
+  <input placeholder="TCBa提醒您注意财务安全" name="price" type="string" value='{{price}}' bindblur='priceBlur'></input>
+  <text class="cuIcon-moneybag text-yellow"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">开始时间</view>
+	<input placeholder="请标清具体时间" name="startTime" class='textarea' value='{{startTime}}' bindblur='startTimeBlur'></input>
+  <text class="cuIcon-timefill text-olive"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">结束时间</view>
+	<input placeholder="请标清具体时间" name="endTime" class='textarea' value='{{endTime}}' bindblur='endTimeBlur'></input>
+	<text class="cuIcon-time text-grey"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">物品类型</view>
+	<picker name="type" mode="selector" range="{{type}}" range-key="name" value="{{typeInd}}" bindchange="type">
+	<input placeholder="运动、书、拼车" id='{{type[typeInd].id}}' name="type" type='text' value='{{type[typeInd].name}}'disabled='true'></input></picker>
+	<span class='icon iconfont icon-weibiaoti34'></span>
+	<text class="cuIcon-form text-blue"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">交易地点</view>
+	<input placeholder="请标清具体地点" name="address" type='string' value='{{address}}' bindblur='addressBlur'></input>
+	<text class="cuIcon-location text-purple"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">备注</view>
+	<input placeholder="······" name="remarks" type='string' value='{{remarks}}' bindblur='remarksBlur'></input>
+	<text class="cuIcon-comment text-red"></text>
+</view>
+
+
+<view class="cu-bar bg-white margin-top" style="width: 750rpx; height: 150rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+	<view class="action" style="width: 72rpx; height: 130rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+			图片上传
+	</view>
+    
+  <view class="grid col-4 grid-square flex-sub" style="width: 564rpx; height: 130rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+		<view class="bg-img" wx:for="{{banner}}" wx:key="key" bindtap="showImageBanner" data-id="{{index}}" data-url="{{imgList[index]}}">
+			<image src="{{item}}" mode='aspectFill'></image>
+			<image class="closeImv" src="../../resources/images/delect.png" mode="scaleToFill" catchtap="deleteImvBanner" data-id="{{index}}"></image>
+			<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+				<text class="cuIcon-close"></text>
+			</view>
+		</view>
+
+		<view class="chooseView" bindtap="chooseBanner" wx:if="{{chooseViewShowBanner}}">
+			<text class="cuIcon-cameraadd" style="padding:5rpx"></text>
+			<image class="chooseImv" src="../../resources/images/add.png" style="width: 134rpx; height: 134rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
+		</view>
+	</view>
+
+</view>
+
+
+<button class="sureRelease cu-btn block bg-green margin-tb-sm lg" style="width: 536rpx; height: 74rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx" form-type='submit'>
+	<text class="cuIcon-upload"></text> 发布物品
+</button>
+</form>

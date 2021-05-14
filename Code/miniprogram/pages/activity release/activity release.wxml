@@ -1,0 +1,50 @@
+<view>- UESCTBangBang -</view>
+
+<form bindsubmit="formSubmit">
+<view class="cu-form-group margin-top">
+	<view class="title">活动名称</view>
+  <input placeholder="简单描述" name="name" type='string' value='{{name}}' bindblur='nameBlur'></input>
+  <text class="cuIcon-form text-pink"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">活动地点</view>
+	<input placeholder="请标清具体地点" name="address" type='string' value='{{address}}' bindblur='addressBlur'></input>
+	<text class="cuIcon-location text-purple"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">活动开始时间</view>
+	<input placeholder="请标清活动的时间" name="startTime" type='string' value='{{startTime}}' bindblur='startTimeBlur'></input>
+  <text class="cuIcon-timefill text-olive"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">联系方式</view>
+	<input placeholder="电话 📞Tel" name="contact" type='string' value='{{contact}}' bindblur='contactBlur'></input>
+	<text class="cuIcon-phone text-orange"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">物品类型</view>
+	<picker name="type" mode="selector" range="{{type}}" range-key="name" value="{{typeInd}}" bindchange="type">
+	<input placeholder="运动、书、拼车" id='{{type[typeInd].id}}' name="type" type='string' value='{{type[typeInd].name}}'disabled='true'></input></picker>
+	<span class='icon iconfont icon-weibiaoti34'></span>
+	<text class="cuIcon-qrcode text-blue"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">活动总人数</view>
+  <input placeholder="约球" name="total" type='number' value='{{total}}' bindblur='totalBlur'></input>
+  <text class="cuIcon-friend text-yellow"></text>
+</view>
+<view class="cu-form-group">
+	<view class="title">活动备注</view>
+	<input placeholder="······" name="remarks" type='string' value='{{remarks}}' bindblur='remarksBlur'></input>
+	<text class="cuIcon-comment text-red"></text>
+</view>
+
+<view class="padding-xl radius shadow-warp bg-white margin-top">
+	<text class="cuIcon-notice text-orange"></text>
+	诚挚提醒您发布完活动后注意随时关注申请消息
+</view>
+
+<button class="sureRelease cu-btn block bg-green margin-tb-sm lg" style="width: 536rpx; height: 74rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx" form-type='submit'>
+	<text class="cuIcon-upload"></text> 发布活动
+</button>
+</form>

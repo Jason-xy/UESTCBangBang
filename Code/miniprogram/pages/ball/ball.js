@@ -37,6 +37,26 @@ Page({
     })
   },
 
+  onLoad: function(event){
+    let taht = this 
+    wx.cloud.callFunction({
+      name: 'activity',
+      data: {
+        op: 'queryAll',
+      }, 
+      success: function(res) {
+        //查看返回数据
+        taht.setData({
+          data:res.result.data
+        })
+        console.log(res);
+        console.log(res.result);
+        console.log(res.result.data);
+        console.log(res.result.data[0]);
+      }
+    })
+  },
+
   onLoad1: function(event){
     let taht = this 
     db.collection('activity').where({

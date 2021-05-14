@@ -1,0 +1,70 @@
+<!--pages/activity release/activity release.wxml-->
+
+<!--活动发布-->
+<form bindsubmit="formSubmit">
+  <!--活动名称-->
+  <view class='title' style="width: 750rpx; height: 148rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class='title_text'>
+      <text style="width: 136rpx; height: 92rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">活动名称:</text>
+      <input name="name" type='string' value='{{name}}' bindblur='nameBlur' style="width: 450rpx; height: 92rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></input>
+    </view>
+  </view>
+
+    <!--活动地点-->
+    <view class='info-point' style="width: 750rpx; height: 148rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+     <view class='title_text'>
+       <text style="width: 143rpx; height: 45rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">活动地点:</text>
+       <input name="address" type='string' value='{{address}}' bindblur='addressBlur' style="width: 450rpx; height: 78rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></input>
+     </view>
+    </view>
+
+  
+  <!--活动时间-->
+  <view class='title' style="width: 750rpx; height: 148rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class='title_text'>
+      <text>活动开始时间:
+        例如：HH:MM:SS
+      </text>
+      <input name="startTime" type='string' value='{{startTime}}' bindblur='startTimeBlur' style="width: 450rpx; height: 71rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></input>
+    </view>
+  </view>
+
+  <!--联系方式-->
+  <view class='info-point' style="width: 750rpx; height: 148rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class='title_text'>
+      <text>联系方式:</text>
+      <input name="contact" type='string' value='{{contact}}' bindblur='contactBlur'></input>
+    </view>
+  </view>
+
+
+  <!--活动类型-->
+  <view class='title' style="width: 750rpx; height: 108rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class='title_text'>
+      <text>活动类型:</text>
+      <picker name="type" mode="selector" range="{{type}}" range-key="name" value="{{typeInd}}" bindchange="type">
+        <input id='{{type[typeInd].id}}' name="type" type='string' value='{{type[typeInd].name}}'disabled='true'></input>
+      </picker>
+      <span class='icon iconfont icon-weibiaoti34'></span>
+    </view>
+  </view>
+  <!--总人数-->
+  <view class='info-point' style="width: 750rpx; height: 148rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class='title_text'>
+      <text>活动总人数:</text>
+      <input name="total" type='number' value='{{total}}' bindblur='totalBlur' style="width: 450rpx; height: 71rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></input>
+    </view>
+  </view>
+ 
+  <!--活动备注-->
+  <view class='title' style="width: 750rpx; height: 148rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view class='title_text'>
+      <text>活动备注:</text>
+      <input name="remarks" type='string' value='{{remarks}}' bindblur='remarksBlur' style="width: 450rpx; height: 118rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></input>
+    </view>
+  </view>
+  
+ 
+    <button form-type='submit' class='sureRelease' style="position: fixed; left: 160rpx; top: 1102rpx">确认发布</button>
+  
+</form>

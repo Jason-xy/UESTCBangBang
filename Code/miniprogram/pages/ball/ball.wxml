@@ -1,11 +1,11 @@
 <Hd></Hd>
-<view class="padding-xl radius shadow-warp bg-white margin-top" style="width: 750rpx; height: 94rpx; display: block; box-sizing: border-box; left: 1rpx; top: -30rpx; position: relative; position:fixed; z-index:2">
-  <view  bindtap="onLoad1" data-index="篮球" class="cu-tag radius" style="position: relative; left: -29rpx; top: -24rpx; width: 80rpx; height: 48rpx; display: inline-flex; box-sizing: border-box; color:olive;"> 篮球</view>
-  <view  bindtap="onLoad2" data-index="网球" class="cu-tag radius" style="position: relative; left: 4rpx; top: -24rpx; width: 80rpx; height: 48rpx; display: inline-flex; box-sizing: border-box; color:orange;"> 网球 </view>
-  <view  bindtap="onLoad3" data-index="乒乓球" class="cu-tag radius" style="position: relative; left: 26rpx; top: -24rpx; color:green;"> 乒乓球 </view>
-  <view  bindtap="onLoad4" data-index="排球" class="cu-tag radius" style="position: relative; left: 42rpx; top: -24rpx; color:purple;"> 排球 </view>
-  <view  bindtap="onLoad5" data-index="羽毛球" class="cu-tag radius" style="position: relative; left: 70rpx; top: -24rpx"> 羽毛球 </view>
-  <view  bindtap="onLoad6" data-index="足球" class="cu-tag radius" style="position: relative; left: 88rpx; top: -24rpx; color:red;"> 足球 </view>
+<view class="padding-xl radius bg-white margin-top" style="width: 750rpx; height: 94rpx; display: block; box-sizing: border-box; left: 1rpx; top: -30rpx; position: relative; position:fixed; z-index:2">
+  <view  bindtap="onLoad1" data-index="篮球" class="shadow-warp cu-tag radius" style="position: relative; left: -29rpx; top: -24rpx; width: 80rpx; height: 48rpx; display: inline-flex; box-sizing: border-box; color:olive;"> 篮球</view>
+  <view  bindtap="onLoad2" data-index="网球" class="shadow-warp cu-tag radius" style="position: relative; left: 4rpx; top: -24rpx; width: 80rpx; height: 48rpx; display: inline-flex; box-sizing: border-box; color:orange;"> 网球 </view>
+  <view  bindtap="onLoad3" data-index="乒乓球" class="shadow-warp cu-tag radius" style="position: relative; left: 26rpx; top: -24rpx; color:green;"> 乒乓球 </view>
+  <view  bindtap="onLoad4" data-index="排球" class="shadow-warp cu-tag radius" style="position: relative; left: 42rpx; top: -24rpx; color:purple;"> 排球 </view>
+  <view  bindtap="onLoad5" data-index="羽毛球" class="shadow-warp cu-tag radius" style="position: relative; left: 70rpx; top: -24rpx"> 羽毛球 </view>
+  <view  bindtap="onLoad6" data-index="足球" class="shadow-warp cu-tag radius" style="position: relative; left: 88rpx; top: -24rpx; color:red;"> 足球 </view>
 </view>
 
 <view wx:for="{{data}}" wx:key="_id" style="z-index:1;">

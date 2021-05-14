@@ -1,2 +1,31 @@
 <!--pages/release/release.wxml-->
-<text>pages/release/release.wxml</text>
+<view class="userinfo-nickname-wrapper" style="width: 750rpx; height: 197rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+      <button class="userinfo-nickname"  style="width: 647rpx; height: 111rpx; display: block; box-sizing: border-box; left: -3rpx; top: 43rpx; position: relative">请选择你想要发布的种类</button>
+    </view>
+
+  <view class="cu-bar bg-white" style="width: 750rpx; height: 104rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-green">活动</text>
+      <text class="bg-green"></text>
+    </view>
+  </view>
+<view class="action text-grey add-action" style="width: 750rpx; height: 256rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+      <button  bindtap = 'gotoActivityRelease' class="cu-btn cuIcon-add bg-green shadow" style="position: relative; left: 138rpx; top: 25rpx; width: 481rpx; height: 251rpx; display: inline-flex; box-sizing: border-box">发布
+        
+      </button>
+       
+    </view>
+    <view class="cu-bar bg-white" style="width: 750rpx; height: 104rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 0rpx">
+    <view class="action sub-title">
+      <text class="text-xl text-bold text-green">物品</text>
+      <text class="bg-green"></text>
+      <!-- last-child选择器-->
+    </view>
+  </view>
+
+    <view class="action text-gray add-action" style="width: 750rpx; height: 256rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+      <button bindtap = 'gotoItemRelease' class="cu-btn cuIcon-add bg-green shadow" style="position: relative; left: 150rpx; top: -3rpx; width: 483rpx; height: 254rpx; display: inline-flex; box-sizing: border-box">发布</button>
+      
+    </view>
+
+    

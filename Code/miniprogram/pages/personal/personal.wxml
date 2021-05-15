@@ -44,7 +44,7 @@
         </view>
 
         <view class="cu-item arrow">
-            <navigator class="content" url="/pages/activities/activities" hover-class="none">
+            <navigator class="content" url="/pages/personal/participated/participated" hover-class="none">
             <image src="/icon/engage.png" class="png" mode="aspectFit"></image>
             <text class="text-grey">我参与的</text>
             </navigator>

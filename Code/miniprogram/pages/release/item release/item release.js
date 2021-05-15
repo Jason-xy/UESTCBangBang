@@ -200,22 +200,22 @@ Page({
         mask: true,
       })
     }  else {
-      const db = wx.cloud.database().collection('item')//初始化数据库 宏定义一个db指代Room表   
-        let that = this;    
-         db.add({       //db之前宏定义的 在这里指数据库中的item表； add指 插入
-              data: {          // data 字段表示需新增的 JSON 数据       
-                userID: app.globalData._ID,
-                name: e.detail.value.name,
-                price: e.detail.value.price,
-                contact: e.detail.value.contact,
-                startTime: e.detail.value.startTime,
-                endTime: e.detail.value.endTime,
-                remarks: e.detail.value.remarks,
-                address: e.detail.value.address,
-                type: e.detail.value.type,
-                image: e.detail.value.image,    //将我们获取到的数据的value值给item表
-                 },          
-          success: function (res) {    
+      wx.cloud.callFunction({
+        name: 'item',
+        data: {
+          op: 'addItem', //指定操作类型
+          name: e.detail.value.name,
+          address: e.detail.value.address,
+          contact: e.detail.value.contact,
+          type: e.detail.value.type,
+          price: e.detail.value.price,
+          image: e.detail.value.image, //图片上传到云存储后的fileid
+          startTime: e.detail.value.startTime,
+          endTime: e.detail.value.endTime,
+          remarks: e.detail.value.remarks,
+        },
+        success: function(res) {
+            //查看返回数据
             wx.showToast({
               title: '发布成功',
               icon: "none",
@@ -227,15 +227,11 @@ Page({
                 wx.switchTab({
                   url: '/pages/release/release'
                 })     
-                 }         
-                       })        
-          
-        
-
- 
-    
-
-      
+            console.log(res);
+            console.log(res.result);
+            console.log(res.result._id); //物品的唯一标识，需要保管好，方便以后查找物品记录
+        }
+      }) 
     }
   },
 

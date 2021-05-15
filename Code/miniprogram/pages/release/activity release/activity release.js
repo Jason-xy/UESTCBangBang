@@ -166,14 +166,16 @@ Page({
         duration: 1000,
         mask: true,
       })
-    } else if (!timeTF.test(e.detail.value.startTime)) {
-      wx.showToast({
-        title: '活动时间确保精确',
-        icon: "none",
-        duration: 1000,
-        mask: true,
-      })
-    } else if (e.detail.value.address === "") {
+      }
+    // } else if (!timeTF.test(e.detail.value.startTime)) {
+    //   wx.showToast({
+    //     title: '活动时间确保精确',
+    //     icon: "none",
+    //     duration: 1000,
+    //     mask: true,
+    //   })
+    // } 
+        else if (e.detail.value.address === "") {
       wx.showToast({
         title: '请输入活动地址',
         icon: "none",

@@ -51,7 +51,7 @@
   <view class="grid col-4 grid-square flex-sub" style="width: 564rpx; height: 130rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
 		<view class="bg-img" wx:for="{{banner}}" wx:key="key" bindtap="showImageBanner" data-id="{{index}}" data-url="{{imgList[index]}}">
 			<image src="{{item}}" mode='aspectFill'></image>
-			<image class="closeImv" src="../../resources/images/delect.png" mode="scaleToFill" catchtap="deleteImvBanner" data-id="{{index}}"></image>
+			<image class="closeImv" v-if="item.url" :src="../../resources/images/delect.png" mode="scaleToFill" catchtap="deleteImvBanner" data-id="{{index}}"></image>
 			<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
 				<text class="cuIcon-close"></text>
 			</view>
@@ -59,7 +59,7 @@
 
 		<view class="chooseView" bindtap="chooseBanner" wx:if="{{chooseViewShowBanner}}">
 			<text class="cuIcon-cameraadd" style="padding:5rpx"></text>
-			<image class="chooseImv" src="../../resources/images/add.png" style="width: 134rpx; height: 134rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
+			<image class="chooseImv" v-if="item.url" :src="../../resources/images/add.png" style="width: 134rpx; height: 134rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
 		</view>
 	</view>
 

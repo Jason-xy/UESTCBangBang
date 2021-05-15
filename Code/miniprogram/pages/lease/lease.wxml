@@ -50,7 +50,7 @@
         <view class="cu-tag bg-cyan">时间</view>
         <view class="cu-tag line-cyan">{{item.startTime}}</view>
       </view>
-      <view class="margin-top" style="width: 334rpx; height: 370rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"><text>物品：{{item.name}}\n交易地点：{{item.address}}\n联系方式：{{item.contact}}\n归还时间：{{item.endTime}}\n价格：{{item.price}}\n备注：{{item.remarks}}\n</text></view>
+      <view class="margin-top" style="width: 334rpx; height: 370rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"><text>物品：{{item.name}}\n交易地点：{{item.address}}\n联系方式：{{item.contact}}\n结束时间：{{item.endTime}}\n价格：{{item.price}}\n备注：{{item.remarks}}\n</text></view>
     </view>
   </view>
 </view>
